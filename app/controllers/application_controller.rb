@@ -6,8 +6,6 @@ class ApplicationController < ActionController::Base
   
   helper_method :current_user  
   before_filter :common
-  before_filter :authenticate
-
   
   private
   
@@ -74,8 +72,6 @@ class ApplicationController < ActionController::Base
     session[:return_to] = nil
   end
   
-
-
   
   def common
     
@@ -86,13 +82,6 @@ class ApplicationController < ActionController::Base
   end
 
 
-  def authenticate
-    if @current_host.include?('picasso')
-     authenticate_or_request_with_http_basic do |username, password|
-       md5_of_password = Digest::MD5.hexdigest(password)
-       username == 'admin' && md5_of_password == 'a5fe3682798613881d7e99ef3ec6b64d'
-     end
-   end
-  end
+
   
 end
