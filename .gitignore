@@ -6,6 +6,5 @@ tmp/**/*
 backups/*
 *~
 .#*
-config/deploy.rb
 Capfile
 project_notes
