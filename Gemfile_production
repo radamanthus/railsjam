@@ -5,6 +5,7 @@ gem 'rails', '3.0.0.beta4'
 
 gem 'rack', "~>1.1.0"
 gem 'mysql'
+gem 'haml'
 gem "friendly_id", "~> 3.0"
 #gem 'rmagick'
 #require 'RMagick'
