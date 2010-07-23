@@ -40,6 +40,7 @@ module Railsjam
   	  g.template_engine :haml
   	  g.test_framework :rspec, :fixture => true
   	end
+  	
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
