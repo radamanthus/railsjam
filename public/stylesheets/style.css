@@ -80,6 +80,9 @@ a:hover {
 	outline:0;
 }
 
+strong {
+	font-weight:bold;
+}
 
 ul li {
 	margin:0;
