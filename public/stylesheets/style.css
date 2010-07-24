@@ -12,7 +12,7 @@ body {
 #top {
 	height:45px;
 	width:100%;
-	background:#515152 url('/images/nag.jpg');
+	background:#515152 url('/images/nav.jpg');
 	color:#FFF;
 	text-align:left;
 	float:left;
@@ -27,12 +27,8 @@ a {
 a:hover {
   color:#790606;
 	outline:0;
-	-moz-focus-inner { border: 0; }
 }
-a:focus { 
-   outline: none; 
-	-moz-focus-inner { border: 0; }
-}
+
 
 ul li {
 	margin:0;
@@ -59,6 +55,7 @@ ul li {
 	color:#FFF;
 	font-size:18px;
 	font-family: Georgia,"Times New Roman",Times,serif;
+	display:block;
 }
 .nav ul li a:hover {
 	color:#f8c964;

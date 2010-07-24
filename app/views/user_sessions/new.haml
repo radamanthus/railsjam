@@ -1,0 +1,11 @@
+%h2 Login
+#login
+  - form_for(@user_session, :url => user_session_path) do |f|
+    = render "shared/error_messages", :target => @user_session
+    = f.label :login
+    = f.text_field :login
+    = f.label :password
+    = f.password_field :password
+    = f.submit "Login"
+  %br/
+%br/

@@ -1,11 +1,5 @@
 = form_for @page do |f|
-  -if @page.errors.any?
-    #errorExplanation
-      %h2= "#{pluralize(@page.errors.count, "error")} prohibited this page from being saved:"
-      %ul
-        - @page.errors.full_messages.each do |msg|
-          %li= msg
-
+  = render "shared/error_messages", :target => @page
   .field
     = f.label :title
     = f.text_field :title
