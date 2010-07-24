@@ -35,6 +35,7 @@ a:hover {
 ul li {
 	margin:0;
 	padding:0;
+	list-style-type:none;
 }
 
 .nav {
@@ -194,4 +195,61 @@ h1.list {
 }
 .index_actions a {
 	font-size:18px;
+}
+
+#sidebar {
+	float:right;
+	width:220px;
+	margin:0px 10px;
+	padding:10px;
+	min-height:100px;
+	height:100px;
+	height:auto!important;
+	position:relative;
+	background:#f9f9f9;
+	border:1px solid #dadada;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+}
+.body {
+	float:left;
+	width:667px;
+	min-height:100px;
+	height:100px;
+	height:auto!important;
+	position:relative;
+}
+
+
+/* Sponsors */
+h3.sponsors_text  {
+	text-indent:-9999px;
+	display:block;
+	height:32px;
+	width:127px;
+	background:url('/images/sponsors/sponsors_text.jpg') no-repeat top left;
+}
+
+ul.sponsors li.exist a {
+	text-indent:-9999px;
+	display:block;
+	height:71px;
+	width:190px;
+	background:url('/images/sponsors/sponsor_exist.jpg') no-repeat top left;
+}
+
+ul.sponsors li.pragprog a {
+	text-indent:-9999px;
+	display:block;
+	height:133px;
+	width:190px;
+	background:url('/images/sponsors/sponsor_pragprog.jpg') no-repeat top left;
+}
+
+ul.sponsors li.ibm a {
+	text-indent:-9999px;
+	display:block;
+	height:71px;
+	width:190px;
+	background:url('/images/sponsors/sponsor_ibm.jpg') no-repeat top left;
 }
