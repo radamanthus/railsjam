@@ -1,0 +1,13 @@
+%p
+  %b Title:
+  = @page.title
+%p
+  %b Body:
+  = @page.body
+%p
+  %b Published:
+  = @page.published
+
+= link_to 'Edit', edit_page_path(@page)
+\|
+= link_to 'Back', pages_path
