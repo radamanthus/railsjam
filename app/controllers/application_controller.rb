@@ -7,7 +7,15 @@ class ApplicationController < ActionController::Base
   helper_method :current_user  
   before_filter :common
   
+  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
+  rescue_from ActionController::RoutingError, :with => :record_not_found
+  rescue_from ActionController::UnknownAction, :with => :record_not_found
+  
   private
+  
+  def record_not_found
+    redirect_to not_found_url
+  end
   
   def current_path
     @current_path = request.request_uri
