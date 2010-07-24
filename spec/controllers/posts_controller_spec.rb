@@ -1,12 +1,21 @@
 require 'spec_helper'
 
 describe PostsController do
-
+  render_views
+  fixtures :posts
+  fixtures :users
+  setup :activate_authlogic
+  
   def mock_post(stubs={})
     @mock_post ||= mock_model(Post, stubs).as_null_object
   end
 
   describe "GET index" do
+    
+     before do
+        @admin_user = UserSession.create(users(:katz_admin))
+     end
+     
     it "assigns all posts as @posts" do
       Post.stub(:all) { [mock_post] }
       get :index
@@ -15,6 +24,8 @@ describe PostsController do
   end
 
   describe "GET show" do
+
+     
     it "assigns the requested post as @post" do
       Post.stub(:find).with("37") { mock_post }
       get :show, :id => "37"
@@ -23,6 +34,10 @@ describe PostsController do
   end
 
   describe "GET new" do
+    
+     before do
+        @admin_user = UserSession.create(users(:katz_admin))
+     end
     it "assigns a new post as @post" do
       Post.stub(:new) { mock_post }
       get :new
@@ -31,6 +46,11 @@ describe PostsController do
   end
 
   describe "GET edit" do
+    
+     before do
+        @admin_user = UserSession.create(users(:katz_admin))
+     end
+     
     it "assigns the requested post as @post" do
       Post.stub(:find).with("37") { mock_post }
       get :edit, :id => "37"
@@ -40,6 +60,10 @@ describe PostsController do
 
   describe "POST create" do
 
+     before do
+        @admin_user = UserSession.create(users(:katz_admin))
+     end
+     
     describe "with valid params" do
       it "assigns a newly created post as @post" do
         Post.stub(:new).with({'these' => 'params'}) { mock_post(:save => true) }
@@ -71,6 +95,9 @@ describe PostsController do
   end
 
   describe "PUT update" do
+     before do
+        @admin_user = UserSession.create(users(:katz_admin))
+     end
 
     describe "with valid params" do
       it "updates the requested post" do
@@ -109,6 +136,11 @@ describe PostsController do
   end
 
   describe "DELETE destroy" do
+    
+      before do
+        @admin_user = UserSession.create(users(:katz_admin))
+     end
+     
     it "destroys the requested post" do
       Post.should_receive(:find).with("37") { mock_post }
       mock_post.should_receive(:destroy)

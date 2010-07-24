@@ -1,12 +1,19 @@
 require 'spec_helper'
 
 describe PagesController do
-
+  render_views
+  fixtures :pages
+  fixtures :users
+  setup :activate_authlogic
+  
   def mock_page(stubs={})
     @mock_page ||= mock_model(Page, stubs).as_null_object
   end
 
   describe "GET index" do
+     before do
+        @admin_user = UserSession.create(users(:katz_admin))
+     end
     it "assigns all pages as @pages" do
       Page.stub(:all) { [mock_page] }
       get :index
@@ -23,6 +30,11 @@ describe PagesController do
   end
 
   describe "GET new" do
+    
+      before do
+        @admin_user = UserSession.create(users(:katz_admin))
+     end
+     
     it "assigns a new page as @page" do
       Page.stub(:new) { mock_page }
       get :new
@@ -31,6 +43,12 @@ describe PagesController do
   end
 
   describe "GET edit" do
+    
+     before do
+        @admin_user = UserSession.create(users(:katz_admin))
+     end
+     
+     
     it "assigns the requested page as @page" do
       Page.stub(:find).with("37") { mock_page }
       get :edit, :id => "37"
@@ -39,8 +57,12 @@ describe PagesController do
   end
 
   describe "POST create" do
+      before do
+        @admin_user = UserSession.create(users(:katz_admin))
+     end
 
     describe "with valid params" do
+      
       it "assigns a newly created page as @page" do
         Page.stub(:new).with({'these' => 'params'}) { mock_page(:save => true) }
         post :create, :page => {'these' => 'params'}
@@ -71,6 +93,10 @@ describe PagesController do
   end
 
   describe "PUT update" do
+    
+      before do
+        @admin_user = UserSession.create(users(:katz_admin))
+     end
 
     describe "with valid params" do
       it "updates the requested page" do

@@ -222,12 +222,16 @@ h1.list {
 
 
 /* Sponsors */
+ul.sponsors {
+	margin:0px 0px 0px 17px;
+}
 h3.sponsors_text  {
 	text-indent:-9999px;
 	display:block;
 	height:32px;
 	width:127px;
 	background:url('/images/sponsors/sponsors_text.jpg') no-repeat top left;
+	margin:0px 0px 0px 25px;
 }
 
 ul.sponsors li.exist a {
