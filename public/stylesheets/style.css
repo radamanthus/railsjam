@@ -24,6 +24,9 @@ a {
 	text-decoration:none;
 	color:#8e1414;
 }
+a:hover {
+  color:#790606;
+}
 ul li {
 	margin:0;
 	padding:0;
@@ -49,4 +52,18 @@ ul li {
 	color:#FFF;
 	font-size:18px;
 	font-family: Georgia,"Times New Roman",Times,serif;
+}
+.nav ul li a:hover {
+	color:#f8c964;
+}
+
+#container {
+	clear:both;
+	width:980px;
+	margin:0 auto;	
+}
+#header {
+	text-indent:-9999px;
+	clear:both;
+	background:url('/images/railsjam2010.png') no-repeat top left;
 }

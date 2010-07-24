@@ -13,6 +13,11 @@
     
     #container
       #header
+        %h1.rj 
+          RailsJam 2010
+        %h2.s
+          Supported by Philippine Ruby Users Group 
+        
       .content
         = yield
     = javascript_include_tag 'analytics' if Rails.env=="production" and @current_host=="www.railsjam.net"
