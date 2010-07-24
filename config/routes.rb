@@ -1,6 +1,6 @@
 Railsjam::Application.routes.draw do |map|
   
-  
+  resources :posts
   resources :pages
   resource :user_session
   

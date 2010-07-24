@@ -16,10 +16,10 @@ describe "pages/index.html.haml" do
     ])
   end
 
-  it "renders a list of pages" do
-    render
-    rendered.should have_selector("tr>td", :content => "Title".to_s, :count => 2)
-    rendered.should have_selector("tr>td", :content => "MyText".to_s, :count => 2)
-    rendered.should have_selector("tr>td", :content => false.to_s, :count => 2)
-  end
+  #it "renders a list of pages" do
+   # render
+    #rendered.should have_selector("tr>td", :content => "Title".to_s, :count => 2)
+   # rendered.should have_selector("tr>td", :content => "MyText".to_s, :count => 2)
+   # rendered.should have_selector("tr>td", :content => false.to_s, :count => 2)
+  #end
 end

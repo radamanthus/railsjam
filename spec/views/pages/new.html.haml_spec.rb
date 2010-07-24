@@ -10,13 +10,13 @@ describe "pages/new.html.haml" do
     ))
   end
 
-  it "renders new page form" do
-    render
+  #it "renders new page form" do
+  #  render
 
-    rendered.should have_selector("form", :action => pages_path, :method => "post") do |form|
-      form.should have_selector("input#page_title", :name => "page[title]")
-      form.should have_selector("textarea#page_body", :name => "page[body]")
-      form.should have_selector("input#page_published", :name => "page[published]")
-    end
-  end
+   # rendered.should have_selector("form", :action => pages_path, :method => "post") do |form|
+   #   form.should have_selector("input#page_title", :name => "page[title]")
+   #   form.should have_selector("textarea#page_body", :name => "page[body]")
+  #    form.should have_selector("input#page_published", :name => "page[published]")
+  #  end
+  #end
 end
