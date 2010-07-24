@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title RailsJam 2010 
+    %title=@title ? @title : "RailsJam"
     = stylesheet_link_tag :all
     = javascript_include_tag :defaults
     = csrf_meta_tag
@@ -24,7 +24,7 @@
         .content-container-mid
           .content-text
             = yield
-
+            = yield :sidebar 
         .content-container-bottom
     #footer
       &copy; 2010 RailsJam.net 

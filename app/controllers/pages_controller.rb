@@ -14,7 +14,7 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.find(params[:id])
-
+    @title = "RailsJam | #{@page.title}" 
     respond_to do |format|
       format.html
       format.xml  { render :xml => @page }

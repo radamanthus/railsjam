@@ -8,6 +8,7 @@ Railsjam::Application.routes.draw do |map|
   match 'logout', :to => 'user_sessions#destroy', :as => "logout"
   match 'login', :to => 'user_sessions#new', :as => "login"
   match 'not_found', :to=>"home#page_not_found", :as=>"not_found"
+  match 'blog/:id', :to=> 'posts#show'
   match ':id', :to=> 'pages#show', :id=>nil
 
   root :to => "home#index"
