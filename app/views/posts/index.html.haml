@@ -1,4 +1,8 @@
-%h1 Posts
+%h1.list Posts
+
+.index_actions
+  = link_to 'New post', new_post_path, :class=>"new_link"
+.clear
 
 %table
   %tr
@@ -10,7 +14,7 @@
     %th Date Updated
     %th
     %th
-    %th
+
 
   - @posts.each do |post|
     %tr
@@ -26,4 +30,4 @@
 
 %br
 
-= link_to 'New post', new_post_path
+

@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    RedCloth (4.2.3)
     abstract (1.0.0)
     actionmailer (3.0.0.beta4)
       actionpack (= 3.0.0.beta4)
@@ -123,6 +124,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  RedCloth
   agnostic-will_paginate
   capybara
   cucumber

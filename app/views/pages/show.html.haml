@@ -1,7 +1,6 @@
-%h2.title
-  = @page.title
 .body
-  = @page.body
+  = raw RedCloth.new(@page.body).to_html
+
 
 -if current_user and current_user.user_type=="Admin"
   = link_to 'Edit', edit_page_path(@page)

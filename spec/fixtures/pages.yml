@@ -1,11 +1,3 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  title: MyString
-  body: MyText
-  published: false
-
-two:
-  title: MyString
-  body: MyText
-  published: false
+about:
+  title: About
+  body: "We are ruby enthusiasts"

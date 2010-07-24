@@ -1,5 +1,9 @@
-%h1 Listing pages
+%h1.list Listing pages
 
+.index_actions
+  =link_to 'New page', new_page_path, :class=>"new_link"
+
+.clear
 %table
   %tr
     %th Title
@@ -9,7 +13,7 @@
     %th Date Updated
     %th
     %th
-    %th
+
 
   - @pages.each do |page|
     %tr
@@ -24,4 +28,4 @@
 
 %br
 
-= link_to 'New page', new_page_path
+

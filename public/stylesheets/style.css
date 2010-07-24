@@ -19,7 +19,9 @@ body {
 	margin:0;
 	padding:0;
 }
-
+.clear {
+	clear:both;
+}
 a {
 	text-decoration:none;
 	color:#8e1414;
@@ -131,6 +133,15 @@ form label {
 	padding:2px 6px;
 	border:1px solid #333;
 }
+.button {
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	background:#333;
+	color:#eee;
+	border:0;
+	padding:8px;
+	font-size:18px;
+}
 table {
  background:#eee;
  padding:5px;
@@ -153,4 +164,34 @@ table td, table th{
 #page_published {
 	float:left;
 	margin:4px 4px 0px 0px;
+}
+.field {
+	clear:both;
+	display:block;
+}
+.actions {
+	width:200px;
+	float:left;
+}
+.show-links {
+	float:right;
+	min-width:30px;
+	width:30px;
+	width:auto!important;
+	font-size:14px;
+	margin-right:40px;
+}
+h1.list {
+	float:left;
+	
+}
+.index_actions {
+	min-width:30px;
+	width:30px;
+	float:right;
+	width:auto!important;
+	margin-right:5px;
+}
+.index_actions a {
+	font-size:18px;
 }

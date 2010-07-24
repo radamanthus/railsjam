@@ -11,7 +11,9 @@
     =link_to "Sponsors", "/sponsors" 
   -if current_user
     %li
-      =link_to "Edit Pages", pages_url
+      =link_to "Manage Pages", pages_url
+    %li
+      =link_to "Manage Posts", posts_url
     %li
       = link_to "Logout", logout_url
   -#%li 

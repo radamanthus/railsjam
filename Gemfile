@@ -8,6 +8,7 @@ gem 'rails', '3.0.0.beta4'
 
 gem 'mysql'
 gem 'haml'
+gem 'RedCloth'
 gem "friendly_id", "~> 3.0"
 #gem 'rmagick',    :require => 'RMagick'
 #gem 'rack-cache', :require => 'rack/cache'
