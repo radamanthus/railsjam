@@ -23,6 +23,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body {
 	line-height: 1;
 }
+html, body {
+	height:100%;
+}
 ul {
 	list-style: none;
 }
@@ -56,6 +59,7 @@ body {
  background: #c7cacd url('/images/bg.jpg');
  color:#333;	
  text-align:center;
+
 }
 
 #top {
@@ -67,6 +71,7 @@ body {
 	float:left;
 	margin:0;
 	padding:0;
+	position:relative;
 }
 .clear {
 	clear:both;
@@ -74,10 +79,12 @@ body {
 a {
 	text-decoration:none;
 	color:#8e1414;
+
 }
 a:hover {
   color:#790606;
 	outline:0;
+
 }
 
 strong {
@@ -93,6 +100,7 @@ ul li {
 .nav {
 	width:980px;
 	margin:0 auto 0 auto;
+	position:relative;
 }
 .nav ul {
 	float:left;
@@ -122,15 +130,23 @@ ul li {
 	width:980px;
 	margin:0 auto;	
 	text-align:left;
+	position:relative;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -40px; 
 }
+
 #header {
 	text-indent:-9999px;
 	clear:both;
 	height:100px;
 	background:url('/images/railsjam2010.png') no-repeat top left;
+	position:relative;
 }
 .content-container {
 	margin-top:20px;
+	padding-bottom: 40px;
 }
 
 .content-container-top {
@@ -157,7 +173,26 @@ ul li {
 	margin:0 auto;
 	padding:0px 10px 0px 10px;
 }
+#footer, .push {
+  height: 40px;	
+}
+#footer {
+	width: 100%;
+  background: #515152;
+  position: relative;
+  color:#FFF; 
+  line-height:40px;
+}
+#footer, .push {
+	clear:both;
+}
 
+#footer a {
+	color:#fff;
+}
+#footer a:hover {
+	color:#f8c964;
+}
 .field {
 	margin-bottom:10px;
 }

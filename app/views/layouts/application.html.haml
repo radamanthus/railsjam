@@ -10,14 +10,13 @@
     #top
       .nav
         =render :partial => "shared/nav"
-    
     #container
       #header
         %h1.rj 
           RailsJam 2010
         %h2.s
           Supported by Philippine Ruby Users Group 
-        
+
       .content-container
         .content-container-top
           &nbsp;
@@ -26,6 +25,8 @@
             = yield
             = yield :sidebar 
         .content-container-bottom
+        
+        
     #footer
       &copy; 2010 RailsJam.net 
       | 
