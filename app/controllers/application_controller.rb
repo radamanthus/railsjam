@@ -87,6 +87,11 @@ class ApplicationController < ActionController::Base
     @current_path = request.env["PATH_INFO"] rescue nil
     @current_browser = request.env["HTTP_USER_AGENT"] rescue nil
     
+    Time::DATE_FORMATS[:no_time] = "%B %d, %Y"
+    Time::DATE_FORMATS[:numerical] = "%m-%d-%y"
+    Time::DATE_FORMATS[:with_time] = "%B %d, %Y %H:%M:%S"
+
+    
   end
 
 
