@@ -71,7 +71,11 @@ ul li {
 #header {
 	text-indent:-9999px;
 	clear:both;
+	height:100px;
 	background:url('/images/railsjam2010.png') no-repeat top left;
+}
+.content-container {
+	margin-top:20px;
 }
 
 .content-container-top {
@@ -111,10 +115,10 @@ form label {
 	font-weight:bold;
 }
 
-input[type=text] {
+.fields input[type=text] {
 	width:400px;
 }
-textarea {
+.fields  textarea {
 	width:900px;
 }
 
