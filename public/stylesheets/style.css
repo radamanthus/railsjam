@@ -4,6 +4,49 @@
 }
 
 body {
- background: #282828;
- color:#FFF;	
+ background: #c7cacd url('/images/bg.jpg');
+ color:#333;	
+ text-align:center;
+}
+
+#top {
+	height:45px;
+	width:100%;
+	background:#515152 url('/images/nag.jpg');
+	color:#FFF;
+	text-align:left;
+	float:left;
+	margin:0;
+	padding:0;
+}
+
+a {
+	text-decoration:none;
+	color:#8e1414;
+}
+ul li {
+	margin:0;
+	padding:0;
+}
+
+.nav {
+	width:980px;
+	margin:0 auto 0 auto;
+}
+.nav ul {
+	float:left;
+	width:980px;
+}
+.nav ul li {
+	list-style-type:none;
+}
+
+.nav ul li a {
+	float:left;
+	height:45px;	
+	line-height:45px;
+	margin:0px 34px 0px 0px;
+	color:#FFF;
+	font-size:18px;
+	font-family: Georgia,"Times New Roman",Times,serif;
 }
