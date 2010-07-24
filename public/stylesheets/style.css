@@ -115,15 +115,40 @@ form label {
 	font-weight:bold;
 }
 
-.fields input[type=text] {
-	width:400px;
-}
-.fields  textarea {
-	width:900px;
-}
 
+.input {
+	width:400px;
+  height:30px;
+	line-height:30px;
+	font-size:18px;
+	padding:2px 6px;
+	border:1px solid #333;
+	color:#551313;
+}
+.textarea {
+	width:900px;
+	font-size:18px;
+	padding:2px 6px;
+	border:1px solid #333;
+}
+table {
+ background:#eee;
+ padding:5px;
+ width:950px;
+}
+table tr{
+	border-bottom:1px  dotted #ccc;
+}
+table tr:hover{
+	border-bottom:1px  dotted #b08e8e;
+	background:#FFF;
+}
+table th {
+	background:#333;
+	color:#FFF;
+}
 table td, table th{
-	padding:5px;
+	padding:10px;
 }
 #page_published {
 	float:left;

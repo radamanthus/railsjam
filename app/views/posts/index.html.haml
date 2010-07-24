@@ -1,4 +1,4 @@
-%h1 Listing posts
+%h1 Posts
 
 %table
   %tr
@@ -6,6 +6,8 @@
     %th Tags
     %th Body
     %th Publsihed
+    %th Date Created
+    %th Date Updated
     %th
     %th
     %th
@@ -14,8 +16,10 @@
     %tr
       %td= post.title
       %td= post.tags
-      %td= post.body
-      %td= post.publsihed
+      %td= truncate(post.body)
+      %td= post.published ? "Yes" : "No"
+      %td= post.created_at
+      %td= post.updated_at
       %td= link_to 'Show', post
       %td= link_to 'Edit', edit_post_path(post)
       %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete

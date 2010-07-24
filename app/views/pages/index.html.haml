@@ -5,6 +5,8 @@
     %th Title
     %th Body
     %th Published
+    %th Date Created
+    %th Date Updated
     %th
     %th
     %th
@@ -12,8 +14,10 @@
   - @pages.each do |page|
     %tr
       %td= page.title
-      %td= page.body
+      %td= truncate(page.body)
       %td= page.published ? "Yes" : "No"
+      %td= page.created_at
+      %td= page.updated_at
       %td= link_to 'Show', page
       %td= link_to 'Edit', edit_page_path(page)
       %td= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete

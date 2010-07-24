@@ -1,20 +1,14 @@
 = form_for @post do |f|
-  -if @post.errors.any?
-    #errorExplanation
-      %h2= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
-      %ul
-        - @post.errors.full_messages.each do |msg|
-          %li= msg
-
+  = render "shared/error_messages", :target => @post
   .field
     = f.label :title
-    = f.text_field :title
+    = f.text_field :title, :class=>"input"
   .field
     = f.label :tags
-    = f.text_field :tags
+    = f.text_field :tags, :class=>"input"
   .field
     = f.label :body
-    = f.text_area :body
+    = f.text_area :body, :class=>"textarea"
   .field
     = f.label :publsihed
     = f.check_box :publsihed
