@@ -1,13 +1,9 @@
-%p
-  %b Title:
+%h2.title
   = @page.title
-%p
-  %b Body:
+.body
   = @page.body
-%p
-  %b Published:
-  = @page.published
 
-= link_to 'Edit', edit_page_path(@page)
-\|
-= link_to 'Back', pages_path
+-if current_user and current_user_type=="Admin"
+  = link_to 'Edit', edit_page_path(@page)
+  \|
+  = link_to 'Back', pages_path

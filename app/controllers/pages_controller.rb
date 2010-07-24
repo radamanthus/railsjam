@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   
-  before_filter :require_admin
+  before_filter :require_admin, :only=>[:new, :create, :edit, :index, :update]
 
   def index
     @pages = Page.all
