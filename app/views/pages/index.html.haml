@@ -13,7 +13,7 @@
     %tr
       %td= page.title
       %td= page.body
-      %td= page.published
+      %td= page.published ? "Yes" : "No"
       %td= link_to 'Show', page
       %td= link_to 'Edit', edit_page_path(page)
       %td= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete
