@@ -18,6 +18,13 @@
         %h2.s
           Supported by Philippine Ruby Users Group 
         
-      .content
-        = yield
+      .content-container
+        .content-container-top
+          &nbsp;
+        .content-container-mid
+          .content-text
+            = yield
+
+        .content-container-bottom
+        
     = javascript_include_tag 'analytics' if Rails.env=="production" and @current_host=="www.railsjam.net"

@@ -9,6 +9,9 @@
     =link_to "Speakers", "/"
   %li 
     =link_to "Sponsors", "/"
+  %li
+    -if current_user
+      = link_to "Logout", logout_url
   -#%li 
     =#link_to "Register", "/"
   -#%li 

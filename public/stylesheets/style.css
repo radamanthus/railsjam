@@ -65,9 +65,37 @@ ul li {
 	clear:both;
 	width:980px;
 	margin:0 auto;	
+	text-align:left;
 }
 #header {
 	text-indent:-9999px;
 	clear:both;
 	background:url('/images/railsjam2010.png') no-repeat top left;
+}
+
+.content-container-top {
+	background:url("/images/container_bg_top.jpg") no-repeat left top;
+	height:20px;
+	width:980px;
+}
+.content-container-mid {
+	background:url("/images/container_bg_mid.jpg") repeat  left top ;
+	float:left;
+	height:auto !important;
+	min-height:400px;
+	width:980px;
+}
+.content-container-bottom {
+	background:url("/images/container_bg_bottom.jpg") no-repeat  left bottom ;
+	clear:both;
+	height:20px;
+	margin-bottom:20px;
+	width:980px;
+}
+.content-text {
+	padding:0px 10px 0px 20px;
+}
+
+form input, form label {
+	display:block;
 }
