@@ -2,13 +2,13 @@
   %li
     =link_to "Home", "/"
   %li
-    =link_to "About", "/"
+    =link_to "About", "/about"
   %li 
-    =link_to "Events", "/"
+    =link_to "Events", "/events"
   %li 
-    =link_to "Speakers", "/"
+    =link_to "Speakers", "/speakers"
   %li 
-    =link_to "Sponsors", "/" 
+    =link_to "Sponsors", "/sponsors" 
   -if current_user
     %li
       = link_to "Logout", logout_url

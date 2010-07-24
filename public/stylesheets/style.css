@@ -99,3 +99,7 @@ ul li {
 form input, form label {
 	display:block;
 }
+
+table td, table th{
+	padding:5px;
+}
