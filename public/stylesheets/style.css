@@ -122,8 +122,11 @@ ul li {
 	font-family: Georgia,"Times New Roman",Times,serif;
 	display:block;
 }
-.nav ul li a:hover, .nav ul li a.active {
+.nav ul li a:hover, .nav ul li a.active, a.email {
 	color:#f8c964;
+}
+a.email:hover {
+	text-decoration:underline;
 }
 
 #container {
