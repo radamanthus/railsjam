@@ -168,7 +168,7 @@ ul li {
 	height:89px;
 	float:left;
 	background:url("/images/contact_bg_left.jpg") no-repeat left top;		
-	font-size:22px;
+	font-size:18px;
 }
 #bottom-content .contact-right{
 	width:40px;
@@ -184,7 +184,7 @@ ul li {
 	width:980px;
 }
 .text-contact {
-	padding:25px 0px 0px 20px;
+	padding:30px 0px 0px 40px;
 }
 .content-container-mid {
 	background:url("/images/container_bg_mid.jpg") repeat  left top ;
@@ -205,8 +205,23 @@ ul li {
 	margin:0 auto;
 	padding:0px 10px 0px 10px;
 }
+#countdown{
+	float:right;
+	width:240px;
+	margin-right:20px;
+	text-align:center;
+}
+#countdown h5 {
+	margin:0;
+	padding:0;
+}
+.red {
+	color:#8E1414;
+}
+
 #footer, .push {
   height: 40px;	
+  clear:both;
 }
 #footer {
 	width: 100%;
