@@ -26,6 +26,15 @@
             = yield :sidebar 
         .content-container-bottom
         
+      #bottom-content
+        #contact
+          .contact-mid
+            .text-contact
+              For interested sponsors, contact us at 
+              %a{:class=>"email"} info at railsjam.net
+              
+          .contact-right
+        
         
     #footer
       &copy; 2010 RailsJam.net 
@@ -33,5 +42,7 @@
       = link_to "Philippine Ruby Users Group", "http://groups.google.com/group/ruby-phil?pli=1", :target=>"_blank", :rel=>"nofollow"
       |
       = link_to "Baguio Ruby Users Group", "http://groups.google.com.ph/group/baguio-ruby?hl=tl", :target=>"_blank", :rel=>"nofollow"
+      | In Partnership with 
+      =link_to "Devcon Philippines" , "http://www.devcon.ph", :target=>"_blank", :rel=>"nofollow"
         
     = javascript_include_tag 'analytics' if Rails.env=="production" and @current_host=="www.railsjam.net"

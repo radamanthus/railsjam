@@ -147,13 +147,44 @@ ul li {
 }
 .content-container {
 	margin-top:20px;
-	padding-bottom: 40px;
+}
+#bottom-content {
+	clear:both;
+	min-height:20px;
+	height:20px;
+	height:auto!important;
+	padding-bottom: 45px;	
+}
+#bottom-content #contact {
+	width:690px;
+	height:89px;
+	float:left;
+	display:block;
+	background:url("/images/contact_bg_mid.jpg") repeat-x left top;	
+	color:#FFF;
+}
+#bottom-content .contact-mid{
+	width:600px;
+	height:89px;
+	float:left;
+	background:url("/images/contact_bg_left.jpg") no-repeat left top;		
+	font-size:22px;
+}
+#bottom-content .contact-right{
+	width:40px;
+	float:right;
+	height:89px;
+	display:block;
+	background:url("/images/contact_bg_right.jpg") no-repeat right top;		
 }
 
 .content-container-top {
 	background:url("/images/container_bg_top.jpg") no-repeat left top;
 	height:20px;
 	width:980px;
+}
+.text-contact {
+	padding:25px 0px 0px 20px;
 }
 .content-container-mid {
 	background:url("/images/container_bg_mid.jpg") repeat  left top ;
