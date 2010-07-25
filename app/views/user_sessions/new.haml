@@ -1,11 +1,17 @@
-%h2 User Login
-#login
-  - form_for(@user_session, :url => user_session_path) do |f|
-    = render "shared/error_messages", :target => @user_session
-    = f.label :login
-    = f.text_field :login
-    = f.label :password
-    = f.password_field :password
-    = f.submit "Login"
+-content_for :sidebar do
+  =render :partial => "shared/sidebar"
+  
+.body
+  %h2 User Login
+  #login
+    - form_for(@user_session, :url => user_session_path) do |f|
+      = render "shared/error_messages", :target => @user_session
+      .field
+        = f.label :login
+        = f.text_field :login, :class=>"nice_field"
+      .field
+        = f.label :password
+        = f.password_field :password, :class=>"nice_field"
+      = f.submit "Login", :class=>"button"
+    %br/
   %br/
-%br/

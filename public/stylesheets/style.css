@@ -216,6 +216,11 @@ form label {
 	border:1px solid #333;
 	color:#551313;
 }
+.nice_field {
+	height:25px;
+	line-height:25px;
+	border:1px solid #333;
+}
 .textarea {
 	width:900px;
 	font-size:18px;
@@ -230,6 +235,10 @@ form label {
 	border:0;
 	padding:8px;
 	font-size:18px;
+}
+#errorExplanation h2, #errorExplanation {
+	font-size:14px;
+	color:red;
 }
 table {
  background:#eee;
