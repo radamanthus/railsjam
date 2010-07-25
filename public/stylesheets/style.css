@@ -409,3 +409,12 @@ ul.sponsors li.ibm a {
 	width:190px;
 	background:url('/images/sponsors/sponsor_ibm.jpg') no-repeat top left;
 }
+
+ul.sponsors li.g2ix a {
+	text-indent:-9999px;
+	display:block;
+	height:72px;
+	width:190px;
+	margin-top:5px;
+	background:url('/images/sponsors/sponsor_g2ix.jpg') no-repeat top left;
+}
