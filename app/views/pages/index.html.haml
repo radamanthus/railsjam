@@ -16,12 +16,13 @@
 
 
   - @pages.each do |page|
+    
     %tr
       %td= page.title
       %td= truncate(page.body)
       %td= page.published ? "Yes" : "No"
-      %td= page.created_at.to_s(:no_time)
-      %td= page.updated_at.to_s(:no_time)
+      %td= page.created_at.to_s(:no_time) rescue nil
+      %td= page.updated_at.to_s(:no_time) rescue nil
       %td= link_to 'Show', page
       %td= link_to 'Edit', edit_page_path(page)
      
