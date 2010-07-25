@@ -27,8 +27,9 @@ role :db, domain, :primary => true
 namespace :deploy do
   task :restart do
     run "cd #{current_path} && mv #{current_path}/config/environment_production.rb #{current_path}/config/environment.rb && 
-    mv #{current_path}/Gemfile_production #{current_path}/Gemfile &&  
-     mv #{current_path}/config/boot_production.rb  #{current_path}/config/boot.rb && touch #{current_path}/tmp/restart.txt"
+     mv #{current_path}/Gemfile_production #{current_path}/Gemfile &&  
+     mv #{current_path}/config/boot_production.rb  #{current_path}/config/boot.rb && touch #{current_path}/tmp/restart.txt &&
+     rm #{current_path}/public/stylesheets/all.css"
   end
 end
 

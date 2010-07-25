@@ -187,7 +187,8 @@ a.email:hover {
 	width:980px;
 }
 .text-contact {
-	padding:30px 0px 0px 40px;
+	padding:30px 0px 0px 30px;
+	font-size:17px;
 }
 .content-container-mid {
 	background:url("/images/container_bg_mid.jpg") repeat  left top ;
