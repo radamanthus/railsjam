@@ -3,15 +3,19 @@
   
 .body
   %h2 User Login
-  #login
-    - form_for(@user_session, :url => user_session_path) do |f|
-      = render "shared/error_messages", :target => @user_session
-      .field
-        = f.label :login
-        = f.text_field :login, :class=>"nice_field"
-      .field
-        = f.label :password
-        = f.password_field :password, :class=>"nice_field"
-      = f.submit "Login", :class=>"button"
-    %br/
+  -unless current_user
+    #login
+      - form_for(@user_session, :url => user_session_path) do |f|
+        = render "shared/error_messages", :target => @user_session
+        .field
+          = f.label :login
+          = f.text_field :login, :class=>"nice_field"
+        .field
+          = f.label :password
+          = f.password_field :password, :class=>"nice_field"
+        = f.submit "Login", :class=>"button"
+      %br/
+  -else
+    You are logged in as 
+    %strong=current_user.email
   %br/

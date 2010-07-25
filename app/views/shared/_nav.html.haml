@@ -1,14 +1,14 @@
 %ul
   %li
-    =link_to "Home", "/"
+    =link_to "Home", "/", :class=> @current_path=="/" ? "active" : "normal"
   %li
-    =link_to "About", "/about"
+    =link_to "About", "/about", :class=> @current_path=="/about" ? "active" : "normal"
   %li 
-    =link_to "Events", "/events"
+    =link_to "Events", "/events", :class=> @current_path=="/events" ? "active" : "normal"
   %li 
-    =link_to "Speakers", "/speakers"
+    =link_to "Speakers", "/speakers", :class=> @current_path=="/speakers" ? "active" : "normal"
   %li 
-    =link_to "Sponsors", "/sponsors" 
+    =link_to "Sponsors", "/sponsors" , :class=> @current_path=="/sponsors" ? "active" : "normal"
   -if current_user
     %li
       =link_to "Manage Pages", pages_url

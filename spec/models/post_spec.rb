@@ -17,6 +17,13 @@ describe Post do
     end
   end
   
+  
+   describe 'return promoted post' do
+    it 'gets the last promoted post' do
+      Post.promoted.size.should == 1
+    end
+    
+  end 
 
 
 end

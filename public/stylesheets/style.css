@@ -122,7 +122,7 @@ ul li {
 	font-family: Georgia,"Times New Roman",Times,serif;
 	display:block;
 }
-.nav ul li a:hover {
+.nav ul li a:hover, .nav ul li a.active {
 	color:#f8c964;
 }
 
@@ -305,7 +305,7 @@ table th {
 table td, table th{
 	padding:10px;
 }
-#page_published {
+#page_published, #post_published, #post_promoted {
 	float:left;
 	margin:4px 4px 0px 0px;
 }

@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   
   def index
-    
+    @promoted = Post.promoted.last
   end
   
   def show

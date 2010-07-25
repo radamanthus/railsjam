@@ -1,3 +1,4 @@
 hello_world:
   title: Hello World
   body: "We are ruby enthusiasts"
+  promoted: true
