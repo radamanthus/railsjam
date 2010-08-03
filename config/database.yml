@@ -40,7 +40,7 @@ test: &test
 production:
   adapter: mysql
   encoding: utf8
-  host: railsjam.net
+  host: localhost
   reconnect: false
   database: railsjam_production
   pool: 5
