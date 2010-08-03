@@ -6,14 +6,14 @@ ssh_options[:forward_agent] = true
 #staging
 set :application, "railsjam"
 set :domain, "railsjam.net"
-set :user, "phruguser"
+set :user, "deploy"
 set :deploy_to, "~/#{domain}/"
 
 
 set :scm, 'git'
-set :scm_user, "phruggit"
-set :scm_domain, "#{domain}"
-set :repository,  "#{scm_user}@#{scm_domain}:~/#{application}.git"
+set :scm_user, "git"
+set :scm_domain, "github.com"
+set :repository,  "#{scm_user}@#{scm_domain}:radamanthus/#{application}.git"
 set :deploy_via, :remote_cache
 
 set :branch, 'master'
