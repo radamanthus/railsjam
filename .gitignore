@@ -8,3 +8,4 @@ backups/*
 .#*
 Capfile
 project_notes
+config/deploy.rb
