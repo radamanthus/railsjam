@@ -13,7 +13,7 @@ describe PostsController do
   describe "GET index" do
     
      before do
-        @admin_user = UserSession.create(users(:katz_admin))
+        require_admin
      end
      
     it "assigns all posts as @posts" do
@@ -36,7 +36,7 @@ describe PostsController do
   describe "GET new" do
     
      before do
-        @admin_user = UserSession.create(users(:katz_admin))
+        require_admin
      end
     it "assigns a new post as @post" do
       Post.stub(:new) { mock_post }
@@ -48,7 +48,7 @@ describe PostsController do
   describe "GET edit" do
     
      before do
-        @admin_user = UserSession.create(users(:katz_admin))
+        require_admin
      end
      
     it "assigns the requested post as @post" do
@@ -61,7 +61,7 @@ describe PostsController do
   describe "POST create" do
 
      before do
-        @admin_user = UserSession.create(users(:katz_admin))
+        require_admin
      end
      
     describe "with valid params" do
@@ -96,7 +96,7 @@ describe PostsController do
 
   describe "PUT update" do
      before do
-        @admin_user = UserSession.create(users(:katz_admin))
+        require_admin
      end
 
     describe "with valid params" do
@@ -138,7 +138,7 @@ describe PostsController do
   describe "DELETE destroy" do
     
       before do
-        @admin_user = UserSession.create(users(:katz_admin))
+       require_admin
      end
      
     it "destroys the requested post" do

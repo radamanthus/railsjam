@@ -12,7 +12,7 @@ describe PagesController do
 
   describe "GET index" do
      before do
-        @admin_user = UserSession.create(users(:katz_admin))
+        require_admin
      end
     it "assigns all pages as @pages" do
       Page.stub(:all) { [mock_page] }
@@ -32,7 +32,7 @@ describe PagesController do
   describe "GET new" do
     
       before do
-        @admin_user = UserSession.create(users(:katz_admin))
+        require_admin
      end
      
     it "assigns a new page as @page" do
@@ -45,7 +45,7 @@ describe PagesController do
   describe "GET edit" do
     
      before do
-        @admin_user = UserSession.create(users(:katz_admin))
+        require_admin
      end
      
      
@@ -58,7 +58,7 @@ describe PagesController do
 
   describe "POST create" do
       before do
-        @admin_user = UserSession.create(users(:katz_admin))
+        require_admin
      end
 
     describe "with valid params" do
@@ -95,7 +95,7 @@ describe PagesController do
   describe "PUT update" do
     
       before do
-        @admin_user = UserSession.create(users(:katz_admin))
+        require_admin
      end
 
     describe "with valid params" do

@@ -35,8 +35,8 @@ gem 'capistrano'
 
 
 group :test do
-  gem 'rspec'
-  gem 'rspec-rails'
+  gem 'rspec', '2.0.0.beta.19'
+  gem 'rspec-rails', '2.0.0.beta.19'
   gem 'database_cleaner'
  	gem 'factory_girl'
  	gem 'shoulda'
