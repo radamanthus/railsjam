@@ -2,3 +2,5 @@
   =render :partial => "shared/sidebar"
 
 .body 
+  %h1= @promoted.title
+  = raw RedCloth.new(@promoted.body).to_html
