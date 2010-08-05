@@ -6,7 +6,8 @@ gem 'rails', '3.0.0.rc'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-gem 'mysql'
+#gem 'mysql'
+gem 'pg'
 gem 'haml'
 gem 'RedCloth'
 gem "friendly_id", "~> 3.0"
@@ -45,3 +46,5 @@ group :test do
   gem 'cucumber-rails'
   gem 'launchy' 
 end
+
+#sudo gem install database_cleaner factory_girl shoulda capybara cucumber cucumber-rails launchy
