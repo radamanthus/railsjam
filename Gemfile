@@ -6,8 +6,8 @@ gem 'rails', '3.0.0.rc'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-#gem 'mysql'
-gem 'pg'
+gem 'mysql'
+#gem 'pg'
 gem 'haml'
 gem 'RedCloth'
 gem "friendly_id", "~> 3.0"

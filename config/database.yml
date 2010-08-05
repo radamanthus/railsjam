@@ -37,24 +37,24 @@ test: &test
   password: bridge
   #socket: /tmp/mysql.sock
 
-#production:
-#  adapter: mysql
-#  encoding: utf8
-#  host: localhost
-#  reconnect: false
-#  database: railsjam_production
-#  pool: 5
-#  username: phrug3210
-#  password: animone32
-#  #socket: /tmp/mysql.sock
-
 production:
-  adapter: postgresql
-  encoding: sql_ascii
+  adapter: mysql
+  encoding: utf8
+  host: localhost
+  reconnect: false
   database: railsjam_production
   pool: 5
-  username: postgres
-  password:
+  username: phrug3210
+  password: animone32
+#  #socket: /tmp/mysql.sock
+
+#production:
+#  adapter: postgresql
+#  encoding: sql_ascii
+#  database: railsjam_production
+#  pool: 5
+#  username: postgres
+#  password:
 
 cucumber:
   <<: *test
