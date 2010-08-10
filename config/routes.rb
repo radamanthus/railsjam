@@ -1,5 +1,12 @@
 Railsjam::Application.routes.draw do |map|
-  
+ 
+  resources :events do
+    resource :attendees
+  end
+
+  resources :users
+  match '/signup', :to => 'users#new'
+
   resources :posts
   resources :pages
   resource :user_session

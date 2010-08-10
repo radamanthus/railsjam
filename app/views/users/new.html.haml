@@ -1,0 +1,18 @@
+%h1 Sign up
+
+- form_for(@user) do |f|
+  = render "shared/error_messages", :target => @user
+  .field
+    = f.label :name
+    = f.text_field :name, :class=>"nice_field"
+  .field
+    = f.label :email
+    = f.text_field :email, :class=>"nice_field"
+  .field
+    = f.label :password
+    = f.password_field :password, :class=>"nice_field"
+  .field
+    = f.label :password_confirmation, "Confirmation"
+    = f.password_field :password_confirmation, :class=>"nice_field"
+  = f.submit "Sign up", :class=>"button"
+%br/
