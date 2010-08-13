@@ -1,0 +1,4 @@
+= form_tag event_attendees_path(@event), :method => 'post' do
+  = "Are you sure you want to attend #{@event.name}?"
+  = submit_tag 'Yes'
+  = button_to 'No'

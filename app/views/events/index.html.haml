@@ -1,0 +1,7 @@
+.body
+  %h2 Events
+
+  - @events.each do |event|
+    = event.name
+    %br/
+    = link_to 'Sign-Up', new_event_attendees_path(event)

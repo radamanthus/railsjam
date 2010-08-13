@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     if @user.save
       #TODO replace with proper flash message
       flash[:success] = "Welcome to the Sample App"
-      redirect_to @user
+      redirect_back_or_default root_url
     else
       @title = "Sign up"
       render 'new'

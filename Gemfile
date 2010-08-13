@@ -25,7 +25,7 @@ gem 'capistrano'
 
 
 # To use debugger
-# gem 'ruby-debug'
+gem 'ruby-debug'
 
 # Bundle the extra gems:
 # gem 'bj'

@@ -1,2 +1,10 @@
-%h1 Events#new
-%p Find me in app/views/events/new.html.haml
+.body
+  %h2 New Event
+
+  - form_for(@event) do |f|
+    = render "shared/error_messages", :target => @event
+    .field
+      = f.label :name
+      = f.text_field :name, :class=>"nice_field"
+    = f.submit "Create", :class=>"button"
+  %br/

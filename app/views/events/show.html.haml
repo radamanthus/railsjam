@@ -1,2 +1,5 @@
-%h1 Events#show
-%p Find me in app/views/events/show.html.haml
+.body
+  %h2= @title
+
+  = link_to 'Sign-Up', new_event_attendees_path(@event)
+
