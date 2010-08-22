@@ -11,4 +11,4 @@
     = raw RedCloth.new(short_post).to_html
     =link_to "Read More", post_url(p)
   .clear
-  = link_to "Subscribe by RSS", posts_url(:rss) 
+  = link_to image_tag('/images/feed_icon.png'), posts_url(:rss), :class=>"rss"

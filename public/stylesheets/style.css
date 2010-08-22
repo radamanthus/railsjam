@@ -434,3 +434,4 @@ ul.sponsors li.nullpointer a {
 }
 
 h1.post-title {border-bottom:1px dotted #ccc}
+a img, img a, img {border:0!important}

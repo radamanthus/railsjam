@@ -10,6 +10,8 @@
       %meta{:content => "RailsJam", :name => "author"}
     = csrf_meta_tag
     %link{:href => "/images/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}
+    = auto_discovery_link_tag :rss, posts_url(:format=>'rss'), :title=>'RailsJam'
+ 
     
   %body
     #top
