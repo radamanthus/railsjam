@@ -10,17 +10,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100810140450) do
+ActiveRecord::Schema.define(:version => 20100822073204) do
 
   create_table "attendees", :force => true do |t|
     t.integer  "user_id"
     t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "years_of_web_programming_experience",  :default => 1
+    t.integer  "years_of_programming_experience",      :default => 1
+    t.integer  "years_of_ruby_experience",             :default => 1
+    t.integer  "years_of_rails_experience",            :default => 1
+    t.string   "current_primary_programming_language"
+    t.string   "preferred_os"
+    t.string   "preferred_ide"
+    t.boolean  "has_laptop",                           :default => true
   end
 
   create_table "events", :force => true do |t|
     t.string   "name"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

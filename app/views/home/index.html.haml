@@ -2,5 +2,11 @@
   =render :partial => "shared/sidebar"
 
 .body 
-  /%h1= @promoted.title
-  /= raw RedCloth.new(@promoted.body).to_html
+
+  -@posts.each do |p|
+    %h1=p.title
+    .details
+      =p.created_at.to_s(:no_time)
+    -short_post = truncate(p.body, :length=>250)
+    = raw RedCloth.new(short_post).to_html
+    =link_to "Read More", post_url(p)

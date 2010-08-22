@@ -4,7 +4,10 @@ class Post < ActiveRecord::Base
   has_friendly_id :title, :use_slug => true
   
   def self.promoted
-    where(:promoted => true)
+    where(:promoted => true, :published=> true)
   end
 
+  def self.published
+    where(:published=> true)
+  end
 end
