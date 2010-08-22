@@ -432,3 +432,5 @@ ul.sponsors li.nullpointer a {
 	margin-left:30px;
 	background:url('/images/sponsors/sponsor_nullpointer.jpg') no-repeat top left;
 }
+
+h1.post-title {border-bottom:1px dotted #ccc}

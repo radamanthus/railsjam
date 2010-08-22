@@ -4,9 +4,9 @@
 .body 
 
   -@posts.each do |p|
-    %h1=p.title
+    %h1.post-title=p.title
     .details
-      =p.created_at.to_s(:no_time)
+      =p.created_at.to_s(:with_time)
     -short_post = truncate(p.body, :length=>250)
     = raw RedCloth.new(short_post).to_html
     =link_to "Read More", post_url(p)

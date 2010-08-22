@@ -47,4 +47,5 @@ group :test do
   gem 'launchy' 
 end
 
+#http://wiki.github.com/mark-moseley/ruby-debug
 #sudo gem install database_cleaner factory_girl shoulda capybara cucumber cucumber-rails launchy
