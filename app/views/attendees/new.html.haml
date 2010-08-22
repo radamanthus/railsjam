@@ -1,4 +1,46 @@
 = form_tag event_attendees_path(@event), :method => 'post' do
-  = "Are you sure you want to attend #{@event.name}?"
-  = submit_tag 'Yes'
-  = button_to 'No'
+  <p>
+  = label_tag "#{current_user.name}, please provide some additional info below to help us in organizing this event."
+  </p>
+  
+  <p>
+  = 'What is your current preferred programming language?'
+  = select_tag :current_primary_programming_language, options_for_select(@programming_language_options)
+  </p>
+  
+  <p>
+  = 'How long have you been programming?'
+  = select_tag :years_of_programming_experience, options_for_select(@experience_options)
+  </p>
+  
+  <p>
+  = 'How long have you been doing web programming?'
+  = select_tag :years_of_web_programming_experience, options_for_select(@experience_options)
+  </p>  
+  
+  <p>
+  = 'How long have you been programming in Ruby?'
+  = select_tag :years_of_ruby_experience, options_for_select(@experience_options)
+  </p>
+  
+  <p>
+  = 'How many years of Rails experience do you have?'
+  = select_tag :years_of_ruby_experience, options_for_select(@experience_options)
+  </p>
+
+  <p>
+  = 'What is your preferred operating system for development?'
+  = select_tag :preferred_os, options_for_select(@os_options)
+  </p>
+
+  <p>
+  = 'What is your preferred IDE for development?'
+  = select_tag :preferred_ide, options_for_select(@ide_options)
+  </p>
+  
+  <p>
+  = 'Do you have a laptop you can use during the training?'
+  = select_tag :has_laptop, options_for_select([['Yes', true], ['No', false]])
+  </p>
+
+  = submit_tag 'Signup'
