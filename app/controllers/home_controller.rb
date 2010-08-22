@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
-  
+  respond_to :html, :rss
+
   def index
-    @promoted = Post.promoted.last
-    @posts = Post.published.order("created_at DESC")
+    respond_with(@posts = Post.published.order("created_at DESC"))
   end
   
   def show

@@ -10,3 +10,5 @@
     -short_post = truncate(p.body, :length=>250)
     = raw RedCloth.new(short_post).to_html
     =link_to "Read More", post_url(p)
+  .clear
+  = link_to "Subscribe by RSS", posts_url(:rss) 

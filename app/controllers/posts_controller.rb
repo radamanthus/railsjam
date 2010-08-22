@@ -1,14 +1,11 @@
 class PostsController < ApplicationController
 
+  respond_to :html, :rss, :xml
   before_filter :require_admin, :only=>[:new, :create, :edit, :index, :update]
   
   def index
-    @posts = Post.all
+    respond_with(@posts = Post.published.order("created_at DESC"))
 
-    respond_to do |format|
-      format.html 
-      format.xml  { render :xml => @posts }
-    end
   end
 
 
@@ -17,7 +14,7 @@ class PostsController < ApplicationController
     @title = "RailsJam | #{@post.title}" 
     respond_to do |format|
       format.html 
-      format.xml  { render :xml => @post }
+
     end
   end
 
@@ -26,8 +23,7 @@ class PostsController < ApplicationController
     @post = Post.new
 
     respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @post }
+      format.html 
     end
   end
 
@@ -43,10 +39,8 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         format.html { redirect_to(@post, :notice => 'Post was successfully created.') }
-        format.xml  { render :xml => @post, :status => :created, :location => @post }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -58,10 +52,8 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.update_attributes(params[:post])
         format.html { redirect_to(@post, :notice => 'Post was successfully updated.') }
-        format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -73,7 +65,6 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(posts_url) }
-      format.xml  { head :ok }
     end
   end
 end
