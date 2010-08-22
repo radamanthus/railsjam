@@ -9,7 +9,7 @@
     =link_to "Speakers", "/speakers", :class=> @current_path=="/speakers" ? "active" : "normal"
   %li 
     =link_to "Sponsors", "/sponsors" , :class=> @current_path=="/sponsors" ? "active" : "normal"
-  -if current_user and current_user.type=="Admin"
+  -if current_user and current_user.user_type=="Admin"
     %li
       =link_to "Manage Pages", pages_url
     %li
