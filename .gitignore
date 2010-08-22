@@ -11,3 +11,5 @@ project_notes
 config/deploy.rb
 config/database.yml
 db/schema.rb
+public/stylesheets/all.css
+public/javascripts/all.js
