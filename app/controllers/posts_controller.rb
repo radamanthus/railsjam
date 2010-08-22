@@ -1,21 +1,18 @@
 class PostsController < ApplicationController
 
   respond_to :html, :rss, :xml
-  before_filter :require_admin, :only=>[:new, :create, :edit, :index, :update]
+  before_filter :require_admin, :only=>[:new, :create, :edit, :update]
   
   def index
     respond_with(@posts = Post.published.order("created_at DESC"))
-
+  
   end
 
 
   def show
     @post = Post.find(params[:id])
     @title = "RailsJam | #{@post.title}" 
-    respond_to do |format|
-      format.html 
 
-    end
   end
 
 

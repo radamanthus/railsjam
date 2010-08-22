@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   end
   
   def show
-    
+
   end
   
   def page_not_found

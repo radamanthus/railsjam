@@ -10,6 +10,7 @@ Railsjam::Application.routes.draw do |map|
   resources :posts
   resources :pages
   resource :user_session
+ 
   
   get "home/index"
   match 'logout', :to => 'user_sessions#destroy', :as => "logout"
@@ -18,6 +19,7 @@ Railsjam::Application.routes.draw do |map|
   match 'blog/:id', :to=> 'posts#show'
   match ':id', :to=> 'pages#show', :id=>nil
 
+  resources :home
   root :to => "home#index"
 
 end
