@@ -1,3 +1,6 @@
+-content_for :sidebar do
+  =render :partial => "shared/sidebar"
+  
 .body
   %h2 Events
   - @events.each do |event|

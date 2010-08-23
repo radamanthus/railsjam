@@ -1,3 +1,6 @@
+-content_for :sidebar do
+  =render :partial => "shared/sidebar"
+  
 .body
   %h2= @event.name
   = flash[:notice] unless flash[:notice].nil?
