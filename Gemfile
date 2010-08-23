@@ -14,7 +14,8 @@ gem "friendly_id", "~> 3.0"
 #gem 'rmagick',    :require => 'RMagick'
 #gem 'rack-cache', :require => 'rack/cache'
 #gem 'dragonfly', "~> 0.6.2"
-gem 'agnostic-will_paginate'
+gem 'will_paginate', '~> 3.0.pre2'
+
 
 
 # Use unicorn as the web server

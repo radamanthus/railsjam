@@ -435,3 +435,9 @@ ul.sponsors li.nullpointer a {
 
 h1.post-title {border-bottom:1px dotted #ccc}
 a img, img a, img {border:0!important}
+
+/* pagination */
+.pagination {clear:both; width: 88%!important; background:none!important; margin: 20px auto 20px auto!important; height:30px!important; line-height:30px!important; text-align:center;}
+.pagination a {padding:3px 10px!important; display: inline-block!important; text-decoration: none!important; background:#eee!important; }
+.pagination a:hover {display: inline-block!important; color:#FFF; text-decoration: none!important; background:#1f508c!important;}
+.pagination span.current {padding:0px 4px 0px 4px;}

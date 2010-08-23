@@ -8,7 +8,7 @@ xml.rss :version => "2.0" do
     for p in @posts
       xml.item do
         xml.title p.title
-        body = raw RedCloth.new(p.body).to_html
+        body = raw RedCloth.new(truncate(p.body, :length=>250)).to_html
         xml.description body
         xml.pubDate p.created_at.to_s(:rfc822)
         xml.link post_url(p)

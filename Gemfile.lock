@@ -29,7 +29,6 @@ GEM
       activemodel (= 3.0.0.rc)
       activesupport (= 3.0.0.rc)
     activesupport (3.0.0.rc)
-    agnostic-will_paginate (3.0.0)
     archive-tar-minitar (0.5.2)
     arel (0.4.0)
       activesupport (>= 3.0.0.beta)
@@ -150,13 +149,13 @@ GEM
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   RedCloth
-  agnostic-will_paginate
   capistrano
   capybara
   cucumber
@@ -172,3 +171,4 @@ DEPENDENCIES
   rspec-rails (= 2.0.0.beta.19)
   ruby-debug19
   shoulda
+  will_paginate (~> 3.0.pre2)
