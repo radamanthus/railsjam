@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   layout 'application'
   
-  filter_parameter_logging :password
   helper_method :current_user  
   before_filter :common
   
@@ -83,7 +82,7 @@ class ApplicationController < ActionController::Base
   
   
   def common
-    
+    flash[:error] = ""
     @current_host = request.env["HTTP_HOST"] rescue nil
     @current_path = request.env["PATH_INFO"] rescue nil
     @current_browser = request.env["HTTP_USER_AGENT"] rescue nil
@@ -92,6 +91,9 @@ class ApplicationController < ActionController::Base
     Time::DATE_FORMATS[:numerical] = "%m-%d-%y"
     Time::DATE_FORMATS[:with_time] = "%B %d, %Y %H:%M:%S"
 
+
+    #set default host for emails
+    ActionMailer::Base.default_url_options[:host] = @current_host
     
   end
 

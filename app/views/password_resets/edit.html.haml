@@ -1,0 +1,19 @@
+-content_for :sidebar do
+  =render :partial => "shared/sidebar"
+
+
+.body
+  %h2 Update your password
+
+  %p Please enter the new password below.
+
+  - form_tag password_reset_path, :method => :put, :id=>"password_reset_form" do
+    .field
+      %label Password
+      = password_field_tag :password, "", :size => "50", :tabindex => "1", :class=>"nice_field"
+    .field
+      %label Password Confirmation
+      = password_field_tag :password_confirmation, "", :size => "50", :tabindex => "1", :class=>"nice_field"
+    .field
+      = submit_tag "Update", :class=>"button"
+  .clear

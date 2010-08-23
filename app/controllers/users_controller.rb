@@ -12,8 +12,6 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      #TODO replace with proper flash message
-      flash[:success] = "Welcome to the Sample App"
       redirect_back_or_default root_url
     else
       @title = "Sign up"

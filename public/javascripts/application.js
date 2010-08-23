@@ -5,4 +5,19 @@ $(document).ready(function() {
 		$(this).attr('href', 'mailto:' + address);
 		$(this).text(address);
 	});
+	
+  $(".error").click(function () {
+  	$(".error").fadeOut("slow");
+  });
+
+  $(".notice").click(function () {
+  	$(".notice").fadeOut("slow");
+  });
+
+
+  $(".success").click(function () {
+  	$(".success").fadeOut("slow");
+  });
+
 });
+
