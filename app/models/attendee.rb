@@ -1,8 +1,8 @@
 class AttendeeValidator < ActiveModel::Validator
     def validate(record)
-      @event_user = Attendee.where(:user_id=>record.user_id, :event_id=>record.event_id).size
+      @attendee = Attendee.where(:user_id=>record.user_id, :event_id=>record.event_id).size
       
-      if @event_user and @event_user > 0
+      if @attendee and @attendee > 0
         record.errors[:base] << "Sorry, you have already signed up for this event."
       end
       
@@ -18,6 +18,13 @@ class Attendee < ActiveRecord::Base
 
   belongs_to :event
   belongs_to :user
+  
+  def self.is_registered(user,event)
+    @attendee = Attendee.where(:user_id=>user, :event_id=>event).size 
+    if @attendee and @attendee.size > 0
+      return true
+    end
+  end
   
 
     

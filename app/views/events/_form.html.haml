@@ -5,5 +5,5 @@
     = f.text_field :name, :class=>"nice_field"
   .field
     = f.label :description
-    = f.text_field :description
+    = f.text_area :description, :class=>"textarea"
   = f.submit params[:id] ? "Update" : "Create", :class=>"button"

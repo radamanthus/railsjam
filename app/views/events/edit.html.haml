@@ -1,7 +1,8 @@
--content_for :sidebar do
-  =render :partial => "shared/sidebar"
-.body
-  %h2 Edit Event
+%h1 
+  Editing 
+  =@event.name
+  Event
+  
 
   =render :partial => "events/form"
   %br/
