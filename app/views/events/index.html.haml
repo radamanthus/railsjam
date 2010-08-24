@@ -8,7 +8,10 @@
       = event.name
     %p
       = event.description
-    -unless Attendee.is_registered(current_user.id,event.id)
-      = link_to 'Sign-Up', new_event_attendees_path(event), :class=>"button"
+    -if current_user
+      -unless Attendee.is_registered(current_user.id,event.id)
+        = link_to 'Sign-Up', new_event_attendees_path(event), :class=>"button"
+      -else
+        %p.error Sorry, you can't sign up because you've already registered for this event
     -else
-      %p.error Sorry, you can't sign up because you've already registered for this event
+      = link_to 'Sign-Up', new_event_attendees_path(event), :class=>"button"
