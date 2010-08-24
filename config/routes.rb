@@ -6,6 +6,8 @@ Railsjam::Application.routes.draw do |map|
 
   resources :users
   match '/signup', :to => 'users#new'
+  
+  match 'account', :to=>'users#edit'
 
   resources :posts
   resources :pages

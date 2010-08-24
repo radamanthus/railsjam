@@ -18,5 +18,31 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+  
+  def edit
+    
+    @user = User.find(current_user.id)
+    
+  end
 
+
+  def update
+
+    @user = User.find(current_user.id)
+
+    
+    
+    respond_to do |format|
+      if @user.update_attributes(params[:user])
+    
+        format.html { redirect_to account_url, :notice=>"Your details have been updated" }
+      else
+        format.html { render :action => "edit" }
+
+      end
+    end
+    
+  end
+  
+  
 end

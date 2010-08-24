@@ -1,0 +1,54 @@
+-content_for :sidebar do
+  =render :partial => "shared/sidebar"
+  
+.body
+  %h2 Your Account 
+  
+  - form_for(@user) do |f|
+    = render "shared/error_messages", :target => @user
+    .left_details
+      .field
+        %label Name
+        = f.text_field :name, :class=>"nice_field"
+      .field
+        = f.label :login
+        = f.text_field :login, :class=>"nice_field"
+      .field
+        = f.label :email
+        = f.text_field :email, :class=>"nice_field"
+      .field
+        = f.label :password
+        = f.password_field :password, :class=>"nice_field"
+      .field
+        = f.label :password_confirmation, "Confirmation"
+        = f.password_field :password_confirmation, :class=>"nice_field"
+
+      .field 
+        = f.label :company_organization , "Company/ Organization"
+        = f.text_field :company_organization , :class=>"nice_field"
+      
+    .right_details
+      .field 
+        = f.label :job_title
+        = f.text_field :job_title , :class=>"nice_field"
+
+
+      .field 
+        = f.label :website
+        = f.text_field :website , :class=>"nice_field"      
+
+
+      .field 
+        = f.label :twitter_id
+        = f.text_field :twitter_id , :class=>"nice_field"   
+      
+      .field 
+        = f.label :city
+        = f.text_field :city , :class=>"nice_field"   
+      
+      .field 
+        = f.label :province
+        = f.text_field :province , :class=>"nice_field"   
+                              
+    = f.submit "Save", :class=>"button"
+  %br/

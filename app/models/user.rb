@@ -15,7 +15,8 @@ class User < ActiveRecord::Base
                        :uniqueness   => { :case_sensitive => false }
   validates :password, :presence     => true,
                        :confirmation => true,
-                       :length       => { :within => MIN_LENGTH..MAX_LENGTH }              
+                       :length       => { :within => MIN_LENGTH..MAX_LENGTH },
+                       :on           => :create           
   validates :login,    :uniqueness   => { :case_sensitive => false }
 
 
