@@ -39,7 +39,7 @@ class AttendeesController < ApplicationController
     # TODO: Check if the current user has already signed up for this event
     @attendee = Attendee.new(
       :event_id => params[:event_id], 
-      :user_id => current_user,
+      :user_id => current_user.id,
       :current_primary_programming_language => params[:current_primary_programming_language],
       :years_of_ruby_experience => params[:years_of_ruby_experience],
       :years_of_programming_experience => params[:years_of_programming_experience],
@@ -52,11 +52,19 @@ class AttendeesController < ApplicationController
     if @attendee.save
       notice = "Thank you for signing up, #{current_user.name}. See you there!"
       path = event_path(params[:event_id])
+      
     else
-      notice = %{Ooops. Cosmic rays coming from the recent Solar Tsunami (see <a href="http://www.nowpublic.com/tech-biz/solar-tsunami-space-storm-headed-toward-earth-2646788.html") caused a server error during your signup. Please try again.}
-      path = new_event_attendee_path(params[:event_id])
+      message = ""
+      @attendee.errors.full_messages.each do |msg|
+        message += msg 
+        message += "<br />"
+      end
+          
+      notice = message 
+      path = new_event_attendees_path(params[:event_id])
+
     end
-    flash[:notice] = notice
+      flash[:notice] = notice
     redirect_to path, :notice => notice
   end
     
