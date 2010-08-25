@@ -45,8 +45,19 @@ production:
   reconnect: false
   database: railsjam_production
   pool: 5
-  username: phrug3210
-  password: animone32
+  username: root  
+  password: bridge
+  
+  
+#production:
+#  adapter: mysql
+#  encoding: utf8
+#  host: localhost
+#  reconnect: false
+#  database: railsjam_production
+#  pool: 5
+#  username: phrug3210
+#  password: animone32
 #  #socket: /tmp/mysql.sock
 
 #production:

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :events, :through => :attendees
+  has_many :attendees #i got this error though i think it's unnecesary -- Could not find the association :attendees in model User
   
   acts_as_authentic
 

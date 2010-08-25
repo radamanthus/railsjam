@@ -30,6 +30,12 @@ Railsjam::Application.configure do
   # Disable Rails's static asset server
   # In production, Apache or nginx will already do this
   config.serve_static_assets = false
+  
+  #mail settings
+  ActionMailer::Base.delivery_method = :sendmail
+  ActionMailer::Base.raise_delivery_errors = true
+  ActionMailer::Base.default_charset = "utf-8"
+  ActionMailer::Base.perform_deliveries = true
 
   # Enable serving of images, stylesheets, and javascripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
