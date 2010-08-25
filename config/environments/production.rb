@@ -36,11 +36,15 @@ Railsjam::Application.configure do
   ActionMailer::Base.raise_delivery_errors = true
   ActionMailer::Base.default_charset = "utf-8"
   ActionMailer::Base.perform_deliveries = true
-  ActionMailer::Base.default_url_options[:host] = "www.railsjam.net"
 
 
   # Enable serving of images, stylesheets, and javascripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
+  
+  config.action_mailer.default_url_options = {
+    :host => 'www.railsjam.net'
+  }
+
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
