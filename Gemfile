@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.rc'
+gem 'rails', '3.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -8,7 +8,7 @@ gem 'rails', '3.0.0.rc'
 
 gem 'mysql'
 #gem 'pg'
-gem 'haml'
+gem 'haml', '~> 3.0.18'
 gem 'RedCloth'
 gem "friendly_id", "~> 3.0"
 #gem 'rmagick',    :require => 'RMagick'

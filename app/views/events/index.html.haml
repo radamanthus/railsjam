@@ -15,3 +15,5 @@
         %p.notice Hey thanks, you've already signed up for this event.
     -else
       = link_to 'Sign-Up', new_event_attendees_path(event), :class=>"button"
+    -if current_user and current_user.user_type=="Admin"
+      =link_to "Show attendees", event_attendees_url(event), :class=>"button"

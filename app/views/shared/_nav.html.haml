@@ -11,9 +11,9 @@
     =link_to "Sponsors", "/sponsors" , :class=> @current_path=="/sponsors" ? "active" : "normal"
   -if current_user and current_user.user_type=="Admin"
     %li
-      =link_to "Manage Pages", pages_url
+      =link_to "Pages", pages_url
     %li
-      =link_to "Manage Posts", posts_url
+      =link_to "Posts", posts_url
   -if current_user
     %li 
       = link_to "Your Account", account_url

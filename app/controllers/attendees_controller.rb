@@ -1,5 +1,13 @@
 class AttendeesController < ApplicationController
-  before_filter :require_user, :only => :new
+  before_filter :require_user, :only => [:new]
+  before_filter :require_admin, :only => [:show ]
+  
+  def show
+    #list attendees for x event
+    @event = Event.find(params[:event_id])
+    @attendees = @event.attendees
+    
+  end
 
   def new
     # TODO: Check if the current user has already signed up for this event
