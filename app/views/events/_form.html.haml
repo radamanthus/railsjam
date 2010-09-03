@@ -1,9 +1,0 @@
-- form_for(@event) do |f|
-  = render "shared/error_messages", :target => @event
-  .field
-    = f.label :name
-    = f.text_field :name, :class=>"nice_field"
-  .field
-    = f.label :description
-    = f.text_area :description, :class=>"textarea"
-  = f.submit params[:id] ? "Update" : "Create", :class=>"button"
