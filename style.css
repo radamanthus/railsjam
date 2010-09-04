@@ -91,7 +91,8 @@ body {
 }
 
 #container {
-	height: 600px;
+
+	height:1500px;
 	background: rgb(255,248,220);
 	padding:20px;
 	color:rgb(0,0,0)
