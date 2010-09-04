@@ -31,7 +31,11 @@ a img {border: 0;}
 figure {position: relative;}
 figure img {width: 100%;}
 
+a {color:rgb(125, 47, 47)}
+a:hover {color:rgb(38, 77, 121)}
 
+
+code, p {margin: 20px 0px 20px 0px;}
 
 /*
 	Typography presets
@@ -100,7 +104,7 @@ body {
 
 code {font-size:12px; background: rgb(255,250,250); }
 
-
+.content {margin-left:14px;}
 
 /* 
 	2-column, 320 px layout for smartphones
