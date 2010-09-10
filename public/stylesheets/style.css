@@ -399,6 +399,14 @@ ul.sponsors li.exist a {
 	margin-left:10px;
 }
 
+ul.sponsors li.aelogica a {
+  background:url('/images/sponsors/sponsor_aelogica.jpg') no-repeat top left;
+	text-indent:-9999px;
+	height:71px;
+	width:190px;
+	display:block;
+	margin-left:10px;
+}
 
 ul.sponsors li.pragprog a{
 	background:url('/images/sponsors/pragprog_small.jpg') no-repeat 25px 10px;
