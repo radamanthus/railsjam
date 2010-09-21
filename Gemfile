@@ -15,8 +15,11 @@ gem "friendly_id", "~> 3.0"
 #gem 'rack-cache', :require => 'rack/cache'
 #gem 'dragonfly', "~> 0.6.2"
 gem 'will_paginate', '~> 3.0.pre2'
-
-
+gem 'rails3-generators'
+gem 'declarative_authorization', :git => "http://github.com/stffn/declarative_authorization.git" 
+gem 'paperclip'
+gem 'rest-client'
+gem 'hpricot'
 
 # Use unicorn as the web server
 # gem 'unicorn'

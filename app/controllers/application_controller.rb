@@ -97,7 +97,12 @@ class ApplicationController < ActionController::Base
     
   end
 
+  protected
+  
+  def permission_denied
+     redirect_to login_url
 
+  end
 
   
 end

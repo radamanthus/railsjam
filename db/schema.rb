@@ -1,8 +1,8 @@
-# This file is auto-generated from the current state of the database. Instead 
+# This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative source for your 
+# Note that this schema.rb definition is the authoritative source for your
 # database schema. If you need to create the application database on another
 # system, you should be using db:schema:load, not running all the migrations
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100822073204) do
+ActiveRecord::Schema.define(:version => 20100921223142) do
 
   create_table "attendees", :force => true do |t|
     t.integer  "user_id"
@@ -51,6 +51,18 @@ ActiveRecord::Schema.define(:version => 20100822073204) do
     t.boolean  "promoted"
     t.boolean  "published"
   end
+
+  create_table "roles", :force => true do |t|
+    t.string "title"
+  end
+
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer "role_id"
+    t.integer "user_id"
+  end
+
+  add_index "roles_users", ["role_id"], :name => "index_roles_users_on_role_id"
+  add_index "roles_users", ["user_id"], :name => "index_roles_users_on_user_id"
 
   create_table "slugs", :force => true do |t|
     t.string   "name"

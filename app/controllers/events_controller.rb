@@ -1,7 +1,6 @@
 class EventsController < ApplicationController
   
-  before_filter :require_admin, :only => [:new, :create, :update, :edit]
-  
+  filter_access_to :all
   
   def index
     @events = Event.all

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   
-  before_filter :require_user, :only => [:edit, :update]
+  filter_access_to :all
     
     
   def show

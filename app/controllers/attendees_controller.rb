@@ -1,7 +1,7 @@
 class AttendeesController < ApplicationController
-  before_filter :require_user, :only => [:new]
-  before_filter :require_admin, :only => [:show ]
-  
+
+  filter_access_to :all
+    
   def show
     #list attendees for x event
     @event = Event.find(params[:event_id])

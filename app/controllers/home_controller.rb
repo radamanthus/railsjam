@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
+  
+  filter_access_to :all
+  
   respond_to :html, :rss
 
   def index

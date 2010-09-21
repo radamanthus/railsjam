@@ -1,7 +1,10 @@
 class PostsController < ApplicationController
 
+
+  filter_access_to :all
+  
   respond_to :html, :rss, :xml
-  before_filter :require_admin, :only=>[:new, :create, :edit, :update]
+
   
   def index
     respond_with(@posts = Post.published.order("created_at DESC"))

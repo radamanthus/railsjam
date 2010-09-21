@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
+  
+  
   has_many :events, :through => :attendees
   has_many :attendees #i got this error though i think it's unnecesary -- Could not find the association :attendees in model User
+  has_and_belongs_to_many :roles
+  
   
   acts_as_authentic
 
@@ -24,6 +28,15 @@ class User < ActiveRecord::Base
   def deliver_password_reset_instructions!
     reset_perishable_token!
     Mailer.deliver_password_reset_instructions(self)
+  end
+
+
+  
+  
+  def role_symbols
+    roles.map do |role|
+      role.title.underscore.to_sym
+    end
   end
   
   

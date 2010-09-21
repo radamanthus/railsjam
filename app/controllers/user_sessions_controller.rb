@@ -1,6 +1,9 @@
 class UserSessionsController < ApplicationController
 
-  before_filter :require_user, :only => [:destroy, :index, :show]
+
+  filter_access_to :all
+  
+  #before_filter :require_user, :only => [:destroy, :index, :show]
 
   protect_from_forgery :only => [:destroy]
 
