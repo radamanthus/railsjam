@@ -7,11 +7,15 @@ authorization do
   end
   
   role :member do 
-     has_permission_on [:events, :attendees], :to => [:index, :show, :new, :create]
-     #later - create ability for member to edit owned events only
+     has_permission_on [:events, :attendees], :to => [:index, :show, :new, :create] 
      
-     has_permission_on [:users], :to => [:edit, :update] 
-     #fix this - make sure user can edit his own profile ONLY!
+     has_permission_on [:events], :to => [:edit, :update]  do
+      if_attribute :user => is { user }
+     end
+     
+     has_permission_on [:users], :to => [:edit, :update]  do
+      if_attribute :user => is { user }
+     end
      
      has_permission_on [:home, :pages, :posts], :to => [:index, :show, :page_not_found]
      has_permission_on [:user_sessions], :to => [:index, :new, :create, :log_me_out, :destroy]
