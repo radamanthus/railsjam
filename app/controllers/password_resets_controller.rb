@@ -1,7 +1,7 @@
 class PasswordResetsController < ApplicationController
   
   include ApplicationHelper
-  before_filter :require_no_user
+ 
   before_filter :load_user_using_perishable_token, :only => [ :edit, :update ]
 
   def new
@@ -17,10 +17,10 @@ class PasswordResetsController < ApplicationController
       redirect_to root_url
     elsif !@user and !valid_email(params[:email])
       flash[:error] = "Please enter a valid email address"
-      render new_password_resets_url
+      redirect_to new_password_reset_url
     else
       flash[:error] = "No user was found with email address #{params[:email]}"
-      redirect_to new_password_resets_url
+      redirect_to new_password_reset_url
     end
   end
 
