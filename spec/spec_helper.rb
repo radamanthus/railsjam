@@ -31,5 +31,9 @@ end
 
 
 def require_admin
-   @admin_user = UserSession.create(users(:katz_admin))
+  @current_user = UserSession.create(users(:katz_admin))
+end
+
+def require_registered_user
+  @current_user = UserSession.create(users(:katz_member))
 end

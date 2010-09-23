@@ -40,8 +40,8 @@ gem 'ruby-debug19'
 
 
 group :test do
-  gem 'rspec', '2.0.0.beta.19'
-  gem 'rspec-rails', '2.0.0.beta.19'
+  gem 'rspec', '2.0.0.beta.22'
+  gem 'rspec-rails', '2.0.0.beta.22'
   gem 'database_cleaner'
  	gem 'factory_girl'
  	gem 'shoulda'

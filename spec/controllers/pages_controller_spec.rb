@@ -1,8 +1,11 @@
 require 'spec_helper'
 
 describe PagesController do
+  
   render_views
-  fixtures :pages
+  #fixtures :pages
+  fixtures :roles
+  fixtures :roles_users
   fixtures :users
   setup :activate_authlogic
   

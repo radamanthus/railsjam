@@ -1,4 +1,5 @@
 katz_admin: 
+  id: 1
   name: 
   login: admin
   crypted_password: 098c986cf0fc5177a98d0d5ce317b166c66346a52c7f4b679f4ab949203b6c515c7780895f6c02ddf50d52943171ed4c82712f56de7a82f6c9f215b829339cb0
@@ -18,6 +19,7 @@ katz_admin:
   updated_at: 2010-07-13 15:09:03
   
 katz_member: 
+  id: 2
   name: 
   login: katz
   crypted_password: 94630520fe806c17fe9c797d9f37ba1e0c779f57bb9cb985ffa4edac11add9bd0e06f9b217b81529f9f43f2bba410ea6c1404fe005e3e736fcc647dcd0bbab91

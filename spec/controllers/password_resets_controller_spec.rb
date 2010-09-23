@@ -3,9 +3,12 @@ require 'spec_helper'
 require 'authlogic/test_case'
 
 describe PasswordResetsController do
+  
   fixtures :users
   setup :activate_authlogic
-
+  fixtures :roles
+  fixtures :roles_users
+  fixtures :users
 
   describe "POST new" do 
     

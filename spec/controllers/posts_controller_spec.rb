@@ -1,8 +1,11 @@
 require 'spec_helper'
 
 describe PostsController do
+  
   render_views
-  fixtures :posts
+  #fixtures :posts
+  fixtures :roles
+  fixtures :roles_users
   fixtures :users
   setup :activate_authlogic
   
