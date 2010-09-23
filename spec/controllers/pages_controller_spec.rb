@@ -138,6 +138,11 @@ describe PagesController do
   end
 
   describe "DELETE destroy" do
+    
+     before do
+        require_admin
+     end
+     
     it "destroys the requested page" do
       Page.should_receive(:find).with("37") { mock_page }
       mock_page.should_receive(:destroy)

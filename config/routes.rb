@@ -1,5 +1,6 @@
 Railsjam::Application.routes.draw do |map|
  
+  resources :events
   resources :events do
     resource :attendees
   end

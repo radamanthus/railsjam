@@ -17,10 +17,10 @@ class PasswordResetsController < ApplicationController
       redirect_to root_url
     elsif !@user and !valid_email(params[:email])
       flash[:error] = "Please enter a valid email address"
-      render :action => :new     
+      render new_password_resets_url
     else
       flash[:error] = "No user was found with email address #{params[:email]}"
-      render :action => :new
+      redirect_to new_password_resets_url
     end
   end
 

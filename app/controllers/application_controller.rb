@@ -82,7 +82,7 @@ class ApplicationController < ActionController::Base
   
   
   def common
-    flash[:error] = ""
+    #flash[:error] = ""
     @current_host = request.env["HTTP_HOST"] rescue nil
     @current_path = request.env["PATH_INFO"] rescue nil
     @current_browser = request.env["HTTP_USER_AGENT"] rescue nil

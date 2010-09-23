@@ -10,6 +10,13 @@ describe EventsController do
   setup :activate_authlogic
   
   describe "GET 'new'" do
+    
+     before do
+      require_admin
+     end
+     
+     
+     
     it "should be successful" do
       get 'new'
       response.should be_success
@@ -17,8 +24,11 @@ describe EventsController do
   end
 
   describe "GET 'show'" do
+    
+     
+     
     it "should be successful" do
-      get 'show'
+      get 'show', :id=>1
       response.should be_success
     end
   end
