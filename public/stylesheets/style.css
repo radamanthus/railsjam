@@ -146,15 +146,16 @@ a.email:hover {
 
 }
 #bottom-content #contact {
-	width:690px;
+	width:440px;
 	height:89px;
 	float:left;
 	display:block;
 	background:url("/images/contact_bg_mid.jpg") repeat-x left top;	
 	color:#FFF;
+	margin-top:20px;
 }
 #bottom-content .contact-mid{
-	width:600px;
+	width:390px;
 	height:89px;
 	float:left;
 	background:url("/images/contact_bg_left.jpg") no-repeat left top;		
@@ -174,7 +175,8 @@ a.email:hover {
 	width:980px;
 }
 .text-contact {
-	padding:30px 0px 0px 30px;
+	padding:5px 0px 0px 5px;
+	margin:10px 0px 0px 20px;
 	font-size:17px;
 }
 .content-container-mid {
@@ -210,6 +212,42 @@ a.email:hover {
 .red {
 	color:#8E1414;
 }
+
+#latest_tweet {
+	width:469px;
+	min-height:108px;
+	height:108px;
+	height:auto!important;
+	background:url('/images/tweet_bg.jpg') no-repeat 0px -10px;
+	display:block;
+	float:right;
+	margin:0px 0px 0px 30px;
+}
+#latest_tweet .tweet {
+ 		margin:30px 0px 0px 100px;
+		background:url('/images/twitter_bg.jpg') repeat;
+		padding:3px;
+		border:2px solid #FFF;
+	 -moz-border-radius: 10px;
+	  border-radius: 10px;
+		width:388px;		
+		float:left;
+
+}
+#latest_tweet .tweet .avatar {
+	float:left;
+	padding:4px;
+	display:block;
+	cursor:pointer;
+}
+#latest_tweet .tweet .text {
+	padding:0px 0px 0px 5px;
+}
+
+#latest_tweet .tweet .text span {
+	display:block;
+}
+
 
 #footer, .push {
   height: 40px;	

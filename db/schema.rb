@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100921223142) do
+ActiveRecord::Schema.define(:version => 20100924123141) do
 
   create_table "attendees", :force => true do |t|
     t.integer  "user_id"
@@ -75,6 +75,19 @@ ActiveRecord::Schema.define(:version => 20100921223142) do
 
   add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
   add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
+
+  create_table "tweets", :force => true do |t|
+    t.string   "user_name"
+    t.string   "body"
+    t.string   "twitter_id"
+    t.string   "twitter_status_id"
+    t.datetime "tweet_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tweets", ["tweet_date"], :name => "index_tweets_on_tweet_date"
+  add_index "tweets", ["twitter_id"], :name => "index_tweets_on_twitter_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

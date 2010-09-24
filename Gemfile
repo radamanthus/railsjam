@@ -20,6 +20,7 @@ gem 'declarative_authorization', :git => "http://github.com/stffn/declarative_au
 gem 'paperclip'
 gem 'rest-client'
 gem 'hpricot'
+gem 'twitter'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -52,4 +53,3 @@ group :test do
 end
 
 #http://wiki.github.com/mark-moseley/ruby-debug
-#sudo gem install database_cleaner factory_girl shoulda capybara cucumber cucumber-rails launchy

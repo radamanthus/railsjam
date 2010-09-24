@@ -27,6 +27,20 @@ module ApplicationHelper
       return false
     end    
   end
+ 
+ 
+  def get_avatar_by_username(username ,size = "b")
+
+
+    #m n b o
+    url = "http://img.tweetimag.es/i/#{username}_#{size}"
+    #http://www.techcrunch.com/2009/09/28/tweetimag-es-an-end-to-broken-twitter-avatars/
+    return  url
+  end
   
+  def get_twitter_link(username,status_id)
+    return "http://twitter.com/#{username}/status/#{status_id}"
+  end
+ 
   
 end
