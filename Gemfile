@@ -21,6 +21,7 @@ gem 'paperclip'
 gem 'rest-client'
 gem 'hpricot'
 gem 'twitter'
+gem 'whenever'
 
 # Use unicorn as the web server
 # gem 'unicorn'
