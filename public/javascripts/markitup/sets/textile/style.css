@@ -1,0 +1,56 @@
+.textile .markItUpButton1 a {
+	background-image:url(/images/textile/h1.png); 
+}
+.textile .markItUpButton2 a {
+	background-image:url(/images/textile/h2.png); 
+}
+.textile .markItUpButton3 a {
+	background-image:url(/images/textile/h3.png); 
+}
+.textile .markItUpButton4 a {
+	background-image:url(/images/textile/h4.png); 
+}
+.textile .markItUpButton5 a {
+	background-image:url(/images/textile/h5.png); 
+}
+.textile .markItUpButton6 a {
+	background-image:url(/images/textile/h6.png); 
+}
+.textile .markItUpButton7 a {
+	background-image:url(/images/textile/paragraph.png); 
+}
+
+.textile .markItUpButton8 a {
+	background-image:url(/images/textile/bold.png);
+}
+.textile .markItUpButton9 a {
+	background-image:url(/images/textile/italic.png);
+}
+.textile .markItUpButton10 a {
+	background-image:url(/images/textile/stroke.png);
+}
+
+.textile .markItUpButton11 a {
+	background-image:url(/images/textile/list-bullet.png);
+}
+.textile .markItUpButton12 a {
+	background-image:url(/images/textile/list-numeric.png);
+}
+
+.textile .markItUpButton13 a {
+	background-image:url(/images/textile/picture.png); 
+}
+.textile .markItUpButton14 a {
+	background-image:url(/images/textile/link.png);
+}
+
+.textile .markItUpButton15 a	{
+	background-image:url(/images/textile/quotes.png);
+}
+.textile .markItUpButton16 a	{
+	background-image:url(/images/textile/code.png);
+}
+
+.textile .preview a {
+	background-image:url(/images/textile/preview.png);
+}
