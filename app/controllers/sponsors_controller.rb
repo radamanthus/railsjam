@@ -23,7 +23,7 @@ class SponsorsController < ApplicationController
 
   def new
     @sponsor = Sponsor.new
-
+    1.times { @sponsor.photos.build }
     respond_to do |wants|
       wants.html 
     end
@@ -31,6 +31,11 @@ class SponsorsController < ApplicationController
 
 
   def edit
+    
+    if @sponsor.photos and @sponsor.photos.size == 0
+      1.times { @sponsor.photos.build }      
+    end
+        
   end
 
 
@@ -40,7 +45,7 @@ class SponsorsController < ApplicationController
     respond_to do |wants|
       if @sponsor.save
         flash[:notice] = 'Sponsor was successfully created.'
-        wants.html { redirect_to(@sponsor) }
+        wants.html { redirect_to sponsors_url }
 
       else
         wants.html { render :action => "new" }
@@ -54,7 +59,7 @@ class SponsorsController < ApplicationController
     respond_to do |wants|
       if @sponsor.update_attributes(params[:sponsor])
         flash[:notice] = 'Sponsor was successfully updated.'
-        wants.html { redirect_to(@sponsor) }
+        wants.html { redirect_to sponsors_url }
 
       else
         wants.html { render :action => "edit" }

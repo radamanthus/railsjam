@@ -26,6 +26,10 @@ Railsjam::Application.routes.draw do |map|
   
   resources :sponsors
   
+  resources :sponsors do
+     resources :photos    
+  end
+  
   
   resources :galleries do
     resources :photos 

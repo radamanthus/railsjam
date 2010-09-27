@@ -1,0 +1,6 @@
+%div{:id=>p ? "file_field#{p.id}" : "file_field", :class=>"attach_file"}
+  %label{:for => "sponsor_photo_attributes_0_file"} File
+  %input{:name => "sponsor[photos_attributes][0][image]", :type => "file", :class=>"file_field"}/
+
+  -if p
+    %input{:name => "sponsor[photos_attributes][0][id]", :type => "hidden", :value => p.id }/

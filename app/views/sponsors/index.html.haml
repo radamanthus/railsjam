@@ -1,0 +1,11 @@
+-content_for :sidebar do
+  =render :partial => "shared/sidebar"
+  
+.body
+  %h2 About The Sponsors
+  - @sponsors.each do |s|
+    %h3
+      = link_to s.name, s.link, :target=>"_blank"
+    =raw RedCloth.new(s.description).to_html 
+    - permitted_to? :edit, :sponsors do
+      = link_to 'Edit', edit_sponsor_url(s)
