@@ -1,0 +1,20 @@
+= form_for @post do |f|
+  = render "shared/error_messages", :target => @post
+  .field
+    = f.label :title
+    = f.text_field :title, :class=>"input"
+  .field
+    = f.label :tags
+    = f.text_field :tags, :class=>"input"
+  .field
+    = f.label :body
+    = f.text_area :body, :class=>"textarea"
+  .field
+    = f.check_box :published
+    = f.label :published
+  .field
+    = f.check_box :promoted
+    %label Promoted on Front Page
+    
+  .actions
+    = f.submit 'Save', :class=>"button"

@@ -7,6 +7,7 @@ describe EventsController do
   fixtures :roles
   fixtures :roles_users
   fixtures :users
+  fixtures :tweets
   setup :activate_authlogic
   
   describe "GET 'new'" do

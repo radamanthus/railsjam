@@ -3,7 +3,7 @@
   %head
     %title=@title ? @title : "RailsJam"
     = stylesheet_link_tag :all, :cache=>true
-    = javascript_include_tag 'jquery'
+    = javascript_include_tag :defaults 
     -if @current_path=="/"
       %meta{:content => "ruby on rails, ruby programmers philippines, ruby on rails training, rails development", :name => "keywords"}
       %meta{:content => "RailsJam is a series of events for Ruby programmers who provide training in the Philippines.", :name => "description"}

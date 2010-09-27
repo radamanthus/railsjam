@@ -7,13 +7,9 @@ gem 'rails', '3.0.0'
 
 
 gem 'mysql'
-#gem 'pg'
 gem 'haml', '~> 3.0.18'
 gem 'RedCloth'
 gem "friendly_id", "~> 3.0"
-#gem 'rmagick',    :require => 'RMagick'
-#gem 'rack-cache', :require => 'rack/cache'
-#gem 'dragonfly', "~> 0.6.2"
 gem 'will_paginate', '~> 3.0.pre2'
 gem 'rails3-generators'
 gem 'declarative_authorization', :git => "http://github.com/stffn/declarative_authorization.git" 
@@ -23,6 +19,9 @@ gem 'hpricot'
 gem 'twitter'
 gem 'whenever'
 gem 'paperclip'
+gem 'jquery-rails'
+gem 'acts-as-taggable-on'
+
 
 
 # Use unicorn as the web server
