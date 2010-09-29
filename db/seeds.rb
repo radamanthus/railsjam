@@ -13,6 +13,10 @@ Sponsor.create!(:name=>"The Pragmatic Programmers", :description=>"Several techn
 Sponsor.create!(:name=>"Manning Publications Co.", :description=>"Manning Publications is an American publisher established by Lee Fitzpatrick and Marjan Bace that publishes books on computer technology topics, with a particular focus on web development.", :link=>"http://www.manning.com/")
 Sponsor.create!(:name=>"Nullpointer.ph", :description=>'It is a question and answer site for Filipino and Philippine-based programmers. Recently they have added a "job board":http://jobs.nullpointer.ph too.', :link=>"http://nullpointer.ph/")
 
+Page.create!(:title=>"About", :body=>"About Page")
+Page.create!(:title=>"Sponsors", :body=>"Sponsors Page")
+Page.create!(:title=>"Speakers", :body=>"Speakers Page")
+
 
 Tweet.create!(:user_name=>"bridgeutopia", :body=>"Tutorial app for RailsJam 2010 http://github.com/gregmoreno/railsjam #railsjam", :twitter_id=>"4168852", :twitter_status_id=>"25402055377", :tweet_date=>"2010-09-24 13:08:51", :created_at=>"2010-09-24 14:08:01", :updated_at=>"2010-09-24 14:08:01")
 
