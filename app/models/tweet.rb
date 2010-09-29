@@ -2,7 +2,7 @@ class Tweet  < ActiveRecord::Base
   
   validates :twitter_id,  :presence => true
   validates :body, :presence => true
-  validates :twiter_status_id, :presence=>true, :uniqueness=>true
+  validates :twitter_status_id, :presence=>true, :uniqueness=>true
   validates :tweet_date, :presence=>true
     
   require 'hpricot'
