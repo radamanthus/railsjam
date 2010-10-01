@@ -6,6 +6,8 @@ class SponsorsController < ApplicationController
 
 
   def index
+    
+    
     @sponsors = Sponsor.all
 
     respond_to do |wants|

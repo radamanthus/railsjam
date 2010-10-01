@@ -90,6 +90,8 @@ class ApplicationController < ActionController::Base
     Time::DATE_FORMATS[:no_time] = "%B %d, %Y"
     Time::DATE_FORMATS[:numerical] = "%m-%d-%y"
     Time::DATE_FORMATS[:with_time] = "%B %d, %Y %H:%M:%S"
+    
+    @sidebar_sponsors = Sponsor.all
 
 
     #set default host for emails

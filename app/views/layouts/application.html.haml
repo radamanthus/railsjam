@@ -2,16 +2,17 @@
 %html
   %head
     %title=@title ? @title : "RailsJam"
-    = stylesheet_link_tag :all, :cache=>true
-    = javascript_include_tag :defaults 
+    = stylesheet_link_tag :all, 'markitup', 'jquery_ui', 'textile', :cache=>true
+
     -if @current_path=="/"
       %meta{:content => "ruby on rails, ruby programmers philippines, ruby on rails training, rails development", :name => "keywords"}
       %meta{:content => "RailsJam is a series of events for Ruby programmers who provide training in the Philippines.", :name => "description"}
       %meta{:content => "RailsJam", :name => "author"}
     = csrf_meta_tag
+    
     %link{:href => "/images/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}
     = auto_discovery_link_tag :rss, posts_url(:format=>'rss'), :title=>'RailsJam'
- 
+    = yield :stylesheet 
     
   %body
     #top
@@ -67,4 +68,11 @@
       =link_to "Devcon Philippines" , "http://www.devcon.ph", :target=>"_blank", :rel=>"nofollow"
         
     = javascript_include_tag 'analytics' if Rails.env=="production" and @current_host=="www.railsjam.net"
-    = javascript_include_tag 'application','rails', 'misc', :cache=>"all"
+    = javascript_include_tag 'jquery', 'rails', 'misc', 'markitup/jquery.markitup', 'jquery-ui', 'jquery.livequery'
+    = javascript_include_tag 'application', 'markitup/sets/textile/set'
+    = yield :javascript_bottom 
+    -if current_user and current_user.is_admin 
+      :javascript
+        $(document).ready(function()	{
+          $('#post_body, #page_body').markItUp(myTextileSettings);
+        });

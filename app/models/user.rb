@@ -25,11 +25,15 @@ class User < ActiveRecord::Base
   validates :login,    :uniqueness   => { :case_sensitive => false }
 
 
+  def is_admin 
+    self.roles.include?(Role.first)
+  end
+    
+  
   def deliver_password_reset_instructions!
     reset_perishable_token!
-    Mailer.deliver_password_reset_instructions(self)
+    Mailer.password_reset_instructions(self).deliver
   end
-
 
   
   
