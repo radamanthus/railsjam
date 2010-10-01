@@ -21,7 +21,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-
+    1.times { @post.attachments.build }
     respond_to do |format|
       format.html 
     end
@@ -30,6 +30,9 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    if @post.attachments and @post.attachments.size == 0
+      1.times { @post.attachments.build }      
+    end
   end
 
 

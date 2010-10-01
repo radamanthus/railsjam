@@ -1,0 +1,21 @@
+-content_for :sidebar do
+  =render :partial => "shared/sidebar"
+  
+.body
+  %h2= @presentation.title 
+  -if @presentation.speaker_name and !@presentation.speaker_name.blank?
+    %ul.speaker-details
+      %li
+        = "by: #{@presentation.speaker_name}"
+        -if @presentation.speaker_link and !@presentation.speaker_link.blank?
+          of 
+          =link_to get_host(@presentation.speaker_link), @presentation.speaker_link
+  = raw @presentation.body
+  .clear
+  -if current_user and current_user.user_type=="Admin"
+    = link_to 'Edit', edit_presentation_path(@presentation)
+    \|
+    = link_to 'Back', presentations_path
+    
+
+

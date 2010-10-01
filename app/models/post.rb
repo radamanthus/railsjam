@@ -7,7 +7,9 @@ class Post < ActiveRecord::Base
   
   has_friendly_id :title, :use_slug => true
   has_many :attachments, :as => 'attachable', :dependent => :destroy
-
+  accepts_nested_attributes_for :attachments, :allow_destroy => true 
+  
+  
   def self.promoted
     where(:promoted => true, :published=> true)
   end

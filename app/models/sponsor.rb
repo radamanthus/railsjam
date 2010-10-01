@@ -5,6 +5,6 @@ class Sponsor < ActiveRecord::Base
   validates :link, :presence=>true, :link=>true
   
   has_many :photos, :as => 'photoable', :dependent => :destroy
-  accepts_nested_attributes_for :photos
+  accepts_nested_attributes_for :photos, :allow_destroy => true 
   
 end

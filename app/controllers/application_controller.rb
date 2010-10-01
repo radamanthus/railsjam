@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
   helper_method :current_user  
   before_filter :common
   
-  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
-  rescue_from ActionController::RoutingError, :with => :record_not_found
-  rescue_from ActionController::UnknownAction, :with => :record_not_found
+  #rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
+  #rescue_from ActionController::RoutingError, :with => :record_not_found
+  #rescue_from ActionController::UnknownAction, :with => :record_not_found
   
   private
   

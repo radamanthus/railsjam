@@ -1,0 +1,37 @@
+-content_for :sidebar do
+  =render :partial => "shared/sidebar"
+  
+.body
+
+  - if permitted_to? :create, :presentations 
+    .index_actions
+      =link_to 'New Presentation', new_presentation_path, :class=>"new_link"
+      
+  - @events.each do |e|
+    %h2="Presentations for #{e.name}"
+    %p=e.description 
+    -e.presentations.each do |p|
+      %h2= p.title
+
+      -if p.speaker_name and !p.speaker_name.blank?
+        %ul.speaker-details
+          %li
+            = "by: #{p.speaker_name}"
+            -if p.speaker_link and !p.speaker_link.blank?
+              of 
+              =link_to get_host(p.speaker_link), p.speaker_link
+
+
+     
+      = raw p.body 
+      
+      -if p.attachments and p.attachments.size > 0
+        -p.attachments.each do |a|
+          =link_to "Download", a.file.url
+          
+      
+      - if permitted_to? :edit, :presentations 
+        | 
+        = link_to 'Edit', edit_presentation_path(p) 
+
+     
