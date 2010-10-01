@@ -11,7 +11,7 @@
     %h2="Presentations for #{e.name}"
     %p=e.description 
     -e.presentations.each do |p|
-      %h2= p.title
+      %h3= p.title
 
       -if p.speaker_name and !p.speaker_name.blank?
         %ul.speaker-details
@@ -30,8 +30,7 @@
           =link_to "Download", a.file.url
           
       
-      - if permitted_to? :edit, :presentations 
-        | 
+      - if permitted_to? :edit, :presentations  
         = link_to 'Edit', edit_presentation_path(p) 
 
      
