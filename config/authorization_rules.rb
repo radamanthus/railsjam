@@ -7,8 +7,10 @@ authorization do
   end
   
   role :member do 
-     has_permission_on [:events, :attendees], :to => [:index, :show, :new, :create] 
+     has_permission_on [:events], :to => [:index, :show, :new, :create] 
      
+     has_permission_on [:attendees], :to => [:new, :create]
+
      has_permission_on [:events], :to => [:edit, :update]  do
       if_attribute :user => is { user }
      end
@@ -26,7 +28,7 @@ authorization do
   
   
   role :guest do 
-     has_permission_on [:home, :posts, :pages, :events, :attendees], :to => [:index, :show, :page_not_found]
+     has_permission_on [:home, :posts, :pages, :events], :to => [:index, :show, :page_not_found]
      has_permission_on [:user_sessions, :password_resets], :to => [:new, :create]
      has_permission_on [:users], :to => [:new, :create]
      has_permission_on [:galleries, :photos, :sponsors], :to=>[:index, :show]

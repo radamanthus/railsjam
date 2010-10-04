@@ -3,9 +3,11 @@
   
 .body
   %h2= @event.name
-  = flash[:notice] unless flash[:notice].nil?
+
   %p
     = @event.description
+    = image_tag @event.photos.first.image.url rescue nil
+
   -if current_user
     -unless Attendee.is_registered(current_user.id,@event.id)
       = link_to 'Sign-Up', new_event_attendees_path(@event), :class=>"button"

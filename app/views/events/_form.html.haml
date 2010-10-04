@@ -1,9 +1,27 @@
-= form_for(@event) do |f|
+= form_for @event, :html=>{:multipart=>true} do |f|
   = render "shared/error_messages", :target => @event
   .field
     = f.label :name
     = f.text_field :name, :class=>"nice_field"
   .field
+    = f.label :starts_at
+    = f.datetime_select :starts_at
+  .field
+    = f.label :ends_at
+    = f.datetime_select :ends_at
+  .field
     = f.label :description
     = f.text_area :description, :class=>"textarea"
+  .field
+    = f.label :location
+    = f.text_field :location, :class=>"nice_field"
+  .field 
+    %p Add an image of the location
+    =render "photo_field", :p=>p
+  .field
+    = f.label :school
+    = f.text_field :school, :class=>"nice_field"
+
+  %input{:name => "event[user_id]", :type => "hidden", :value => current_user.id }
+    
   = f.submit params[:id] ? "Update" : "Create", :class=>"button"
