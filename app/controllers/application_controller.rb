@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
   helper_method :current_user  
   before_filter :common
   
-  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
-  rescue_from ActionController::RoutingError, :with => :record_not_found
-  rescue_from ActionController::UnknownAction, :with => :record_not_found
+  #rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
+  #rescue_from ActionController::RoutingError, :with => :record_not_found
+  #rescue_from ActionController::UnknownAction, :with => :record_not_found
   
   private
   
@@ -90,6 +90,8 @@ class ApplicationController < ActionController::Base
     Time::DATE_FORMATS[:no_time] = "%B %d, %Y"
     Time::DATE_FORMATS[:numerical] = "%m-%d-%y"
     Time::DATE_FORMATS[:with_time] = "%B %d, %Y %H:%M:%S"
+    
+    @sidebar_sponsors = Sponsor.all
 
 
     #set default host for emails

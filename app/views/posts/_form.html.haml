@@ -1,4 +1,4 @@
-= form_for @post do |f|
+= form_for @post , :html=>{:multipart=>true} do |f|
   = render "shared/error_messages", :target => @post
   .field
     = f.label :title
@@ -15,6 +15,19 @@
   .field
     = f.check_box :promoted
     %label Promoted on Front Page
+
+  -if @post.attachments and @post.attachments.size > 0 and  @post.attachments[0].file and !@post.attachments[0].file.url.include?('missing')
+    -@post.attachments.each do |p|
+      %li{:id=>"file_"+p.id.to_s}
+        =link_to "View File", p.file.url, :target=>"_blank"
+        %br/
+        =link_to "Delete", attachment_url(p.id), :method=>:delete, :confirm=>"Are you sure you want to delete this file?", :remote=>:true, :class=>"alert"
+      =render "file_field", :p=>p
+      
+  
+  .field 
+    %p Add a file for this post
+    =render "file_field", :p=>p
     
   .actions
     = f.submit 'Save', :class=>"button"

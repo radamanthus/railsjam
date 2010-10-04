@@ -157,6 +157,8 @@ GEM
     ruby_core_source (0.1.4)
       archive-tar-minitar (>= 0.5.2)
     rubyzip (0.9.4)
+    sanitize (1.2.1)
+      nokogiri (~> 1.4.1)
     selenium-webdriver (0.0.27)
       ffi (>= 0.6.1)
       json_pure
@@ -205,6 +207,7 @@ DEPENDENCIES
   rspec (= 2.0.0.beta.22)
   rspec-rails (= 2.0.0.beta.22)
   ruby-debug19
+  sanitize
   shoulda
   twitter
   whenever

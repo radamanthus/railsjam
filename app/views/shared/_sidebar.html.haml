@@ -1,8 +1,9 @@
 #sidebar
   %h3.sponsors_text Sponsors
   %ul.sponsors
-    - Sponsor.all.each do |s|
-      -s_image = image_tag s.photos.first.image.url rescue nil 
-      %li{:class=>s.name.downcase.gsub(" ", "")+"_image"}=link_to s_image, s.link, :target=>"_blank"   
+    -if @sidebar_sponsors and @sidebar_sponsors.size > 0 
+      - @sidebar_sponsors.each do |s|
+        -s_image = image_tag s.photos.first.image.url rescue nil 
+        %li{:class=>s.name.downcase.gsub(" ", "")+"_image"}=link_to s_image, s.link, :target=>"_blank"   
 
   =link_to "Read About The Sponsors", "/sponsors", :class=>"about_sponsors_link"

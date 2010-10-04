@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100927125750) do
+ActiveRecord::Schema.define(:version => 20101001150934) do
 
   create_table "attachments", :force => true do |t|
     t.string   "file_file_name"
@@ -84,6 +84,21 @@ ActiveRecord::Schema.define(:version => 20100927125750) do
     t.boolean  "promoted"
     t.boolean  "published"
   end
+
+  create_table "presentations", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "link"
+    t.string   "speaker_name"
+    t.string   "speaker_link"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "presentations", ["event_id"], :name => "index_presentations_on_event_id"
+  add_index "presentations", ["user_id"], :name => "index_presentations_on_user_id"
 
   create_table "roles", :force => true do |t|
     t.string "title"

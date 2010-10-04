@@ -15,7 +15,19 @@ module ApplicationHelper
     
     html
   end
-  
+ 
+
+  def get_host(url)
+    
+    begin
+      uri = URI.parse(url)
+      return uri.host
+    rescue URI::InvalidURIError
+      return url.gsub(/^(http:\/\/|https:\/\/)/, "")
+    end
+
+
+  end 
   
   #validation 
   def valid_email(email)

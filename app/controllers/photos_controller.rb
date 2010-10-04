@@ -60,7 +60,9 @@ class PhotosController < ApplicationController
 
 
   def destroy
+    @photo.image.destroy
     @photo.destroy
+
     @file_id = "#file#{@photo.id}"
     @file_field_id = "#file_field#{@photo.id}"
     respond_to do |wants|

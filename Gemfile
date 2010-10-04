@@ -21,6 +21,7 @@ gem 'whenever'
 gem 'paperclip'
 gem 'jquery-rails'
 gem 'acts-as-taggable-on'
+gem 'sanitize'
 
 
 

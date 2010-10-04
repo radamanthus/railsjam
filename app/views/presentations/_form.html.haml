@@ -1,0 +1,41 @@
+= form_for @presentation, :html=>{:multipart=>true} do |f|
+  = render "shared/error_messages", :target => @presentation
+  .field
+    = f.label :title
+    = f.text_field :title, :class=>"input"
+  .field
+    = f.label :event_id
+    = select("presentation", "event_id", Event.all.collect {|p| [ p.name, p.id ] }, {:prompt => 'Select Event'}, :class=>"input")
+
+  .field
+    = f.label :link 
+    = f.text_field :link, :class=>"input"
+
+  .field
+    = f.label :speaker_name 
+    = f.text_field :speaker_name , :class=>"input"
+
+  .field
+    = f.label :speaker_link 
+    = f.text_field :speaker_link, :class=>"input"
+        
+  .field
+    = f.label :body
+    = f.text_area :body, :class=>"textarea"
+
+  -if @presentation.attachments and @presentation.attachments.size > 0 and  @presentation.attachments[0].file and !@presentation.attachments[0].file.url.include?('missing')
+    -@presentation.attachments.each do |p|
+      %li{:id=>"file_"+p.id.to_s}
+        =link_to "View File", p.file.url, :target=>"_blank"
+        %br/
+        =link_to "Delete", attachment_url(p.id), :method=>:delete, :confirm=>"Are you sure you want to delete this file?", :remote=>:true, :class=>"alert"
+      =render "file", :p=>p
+      
+  
+  .field 
+    %p Add a file for this presentation
+    =render "file", :p=>p
+    
+    
+  .actions
+    = f.submit 'Save', :class=>"button"

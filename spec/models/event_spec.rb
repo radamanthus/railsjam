@@ -16,5 +16,12 @@ describe Event do
     end
   end
   
+   describe "assert associations" do
 
+     it { should have_many(:users) }
+     it { should have_many(:attendees) }
+     it { should have_many(:presentations) }
+
+   end
+   
 end
