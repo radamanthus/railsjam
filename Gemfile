@@ -4,6 +4,7 @@ gem 'rails', '3.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+ 
 
 
 gem 'mysql'
@@ -44,8 +45,8 @@ gem 'ruby-debug19'
 
 
 group :test do
-  gem 'rspec', '2.0.0.beta.22'
-  gem 'rspec-rails', '2.0.0.beta.22'
+  gem 'rspec', '2.0.0'
+  gem 'rspec-rails', '2.0.0'
   gem 'database_cleaner'
  	gem 'factory_girl'
  	gem 'shoulda'
