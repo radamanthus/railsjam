@@ -13,7 +13,7 @@ gem 'RedCloth'
 gem "friendly_id", "~> 3.0"
 gem 'will_paginate', '~> 3.0.pre2'
 gem 'rails3-generators'
-gem 'declarative_authorization', :git => "http://github.com/stffn/declarative_authorization.git" 
+gem 'declarative_authorization'
 gem 'paperclip'
 gem 'rest-client'
 gem 'hpricot'
@@ -23,7 +23,7 @@ gem 'paperclip'
 gem 'jquery-rails'
 gem 'acts-as-taggable-on'
 gem 'sanitize'
-gem 'authlogic', :git => "git://github.com/railsware/authlogic.git" 
+#gem 'authlogic', :git => "git://github.com/railsware/authlogic.git" 
 
 
 # Use unicorn as the web server

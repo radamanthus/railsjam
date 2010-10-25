@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101001150934) do
+ActiveRecord::Schema.define(:version => 20101004061728) do
 
   create_table "attachments", :force => true do |t|
     t.string   "file_file_name"
@@ -45,6 +45,12 @@ ActiveRecord::Schema.define(:version => 20101001150934) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.string   "location"
+    t.string   "school"
+    t.text     "details"
+    t.integer  "user_id"
   end
 
   create_table "galleries", :force => true do |t|

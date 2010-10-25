@@ -4,8 +4,8 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require File.dirname(__FILE__) + "/factories"
-require 'authlogic/test_case'
-
+#require 'authlogic/test_case'
+include Authlogic::TestCase
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
