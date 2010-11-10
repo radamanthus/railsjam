@@ -9,15 +9,16 @@
       
 
   -@presentations.each do |p|
-    %h3= p.title
+    %h3= link_to p.title, presentation_url(p)
 
     -if p.speaker_name and !p.speaker_name.blank?
       %ul.speaker-details
         %li
-          = "by: #{p.speaker_name}"
-          -if p.speaker_link and !p.speaker_link.blank?
-            of 
-            =link_to get_host(p.speaker_link), p.speaker_link
+          by: 
+          -if (p.speaker_link and !p.speaker_link.blank?)
+            = link_to p.speaker_name, p.speaker_link, :target=>"_blank"
+          -else
+            p.speaker_name
 
 
 
