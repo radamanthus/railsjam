@@ -5,21 +5,21 @@
 
   - if permitted_to? :create, :presentations 
     .index_actions
-      =link_to 'New Presentation', new_presentation_path, :class=>"new_link"
+      =# link_to 'New Presentation', new_presentation_path, :class=>"new_link"
       
-  - @events.each do |e|
-    %h2="Presentations for #{e.name}"
-    %p=e.description 
-    -e.presentations.each do |p|
-      %h3= p.title
 
-      -if p.speaker_name and !p.speaker_name.blank?
-        %ul.speaker-details
-          %li
-            = "by: #{p.speaker_name}"
-            -if p.speaker_link and !p.speaker_link.blank?
-              of 
-              =link_to get_host(p.speaker_link), p.speaker_link
+  -@presentations.each do |p|
+    %h3= p.title
+
+    -if p.speaker_name and !p.speaker_name.blank?
+      %ul.speaker-details
+        %li
+          = "by: #{p.speaker_name}"
+          -if p.speaker_link and !p.speaker_link.blank?
+            of 
+            =link_to get_host(p.speaker_link), p.speaker_link
+
+
 
 
      
@@ -32,5 +32,7 @@
       
       - if permitted_to? :edit, :presentations  
         = link_to 'Edit', edit_presentation_path(p) 
+        
+  =will_paginate @presentations
 
      

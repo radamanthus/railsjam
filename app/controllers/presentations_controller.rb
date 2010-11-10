@@ -5,8 +5,8 @@ class PresentationsController < ApplicationController
   
   def index
     
-    @events = Event.all 
-    #@presentations = Presentation.all
+    #@events = Event.all 
+    @presentations = Presentation.order("created_at DESC").paginate( :page => params[:page], :per_page => 2)
 
     respond_to do |format|
       format.html
