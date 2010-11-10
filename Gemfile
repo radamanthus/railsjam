@@ -23,7 +23,7 @@ gem 'paperclip'
 gem 'jquery-rails'
 gem 'acts-as-taggable-on'
 gem 'sanitize'
-#gem 'authlogic', :git => "git://github.com/railsware/authlogic.git" 
+gem 'authlogic', :git => "git://github.com/railsware/authlogic.git" 
 
 
 # Use unicorn as the web server

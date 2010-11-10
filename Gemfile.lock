@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/railsware/authlogic.git
+  revision: 6b0fc4faa9f275a7d1a84b775d877bce273b442e
+  specs:
+    authlogic (2.1.6)
+      activesupport
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -182,6 +189,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   acts-as-taggable-on
+  authlogic!
   capistrano
   capybara
   cucumber
