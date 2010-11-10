@@ -33,7 +33,9 @@ class PasswordResetsController < ApplicationController
     
       @user.password = params[:password] 
       @user.password_confirmation = params[:password_confirmation]
-      
+    
+    # TO DO : Move this model file 
+    
     if !@user.password.blank? && !@user.password_confirmation.blank? && (@user.password==@user.password_confirmation) &&  @user.password.size > 5 && @user.password_confirmation.size > 5
         @user.save 
         flash[:success] = "Your password was successfully updated"
@@ -48,11 +50,11 @@ class PasswordResetsController < ApplicationController
  
     elsif !@user.password.blank? && !@user.password_confirmation.blank? && (@user.password==@user.password_confirmation) &&  @user.password.size <= 5 && @user.password_confirmation.size <= 5
 
-      flash[:error] = "Your password must be at least 6 characters"
+      flash[:error] = "Your password must be at least 5 characters"
       render :action => :edit           
             
     else
-      flash[:error] = "Your password could not be updated. Please make sure that they match and have at least 6 characters in length."
+      flash[:error] = "Your password could not be updated. Please make sure that they match and have at least 5 characters in length."
       render :action => :edit
       
     end

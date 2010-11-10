@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   filter_access_to :all
   
   def index
-    @events = Event.all
+    @events = Event.order("created_at DESC")
   end
   
   def show
