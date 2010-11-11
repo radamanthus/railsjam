@@ -12,7 +12,7 @@
   %li 
     =link_to "Presentations", "/presentations" , :class=> @current_path=="/presentations" ? "active" : "normal"
     
-  -if current_user and current_user.user_type=="Admin"
+  -if current_user and current_user.is_admin 
     %li
       =link_to "Pages", pages_url
     %li

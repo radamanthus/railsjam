@@ -41,9 +41,9 @@ module Railsjam
   	  g.test_framework :rspec, :fixture => true
   	end
   	
-    config.middleware.use "::ExceptionNotifier" , :email_prefix => "[RailsJam]", 
-     :sender_address => %{"notifier" <errors@railsjam.net>},
-     :exception_recipients => %w{info@bridgeutopiaweb.com}    
+   # config.middleware.use "::ExceptionNotifier" , :email_prefix => "[RailsJam]", 
+   #  :sender_address => %{"notifier" <errors@railsjam.net>},
+    # :exception_recipients => %w{info@bridgeutopiaweb.com}    
   	
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
