@@ -6,10 +6,12 @@
   -if @presentation.speaker_name and !@presentation.speaker_name.blank?
     %ul.speaker-details
       %li
-        = "by: #{@presentation.speaker_name}"
-        -if @presentation.speaker_link and !@presentation.speaker_link.blank?
-          of 
-          =link_to get_host(@presentation.speaker_link), @presentation.speaker_link
+        by: 
+        -if (@presentation.speaker_link and !@presentation.speaker_link.blank?)
+          = link_to @presentation.speaker_name, @presentation.speaker_link, :target=>"_blank"
+        -else
+          = @presentation.speaker_name
+
   = raw @presentation.body
   .clear
   -if current_user and current_user.user_type=="Admin"
