@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
+  attr_accessible :name, :login, :password, :password_confirmation, :email, :gender, :job_title, :company_organization, :website, :twitter_id, :city, :province, :country
+  
   MIN_LENGTH = 6
   MAX_LENGTH = 20
   
