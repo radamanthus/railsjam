@@ -4,7 +4,7 @@
 .body
   %h2 Sign up
 
-  - form_for(@user) do |f|
+  = form_for(@user) do |f|
     = render "shared/error_messages", :target => @user
     .field
       = f.label :name

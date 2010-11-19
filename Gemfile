@@ -7,7 +7,8 @@ gem 'rails', '3.0.1'
  
 
 
-gem 'mysql'
+gem 'mysql2'
+gem 'pg'
 gem 'haml', '~> 3.0.18'
 gem 'RedCloth'
 gem "friendly_id", "~> 3.0"
@@ -46,6 +47,7 @@ gem 'ruby-debug19'
 
 group :test do
   gem 'rspec', '2.0.0'
+  gem 'email_spec'
   gem 'rspec-rails', '2.0.0'
   gem 'database_cleaner'
  	gem 'factory_girl'
