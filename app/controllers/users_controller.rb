@@ -16,7 +16,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_back_or_default root_url
+      flash[:notice] = "User has been created"
+      redirect_to new_user_session_path
     else
       @title = "Sign up"
       render 'new'

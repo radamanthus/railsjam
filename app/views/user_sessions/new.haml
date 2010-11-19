@@ -5,7 +5,7 @@
   %h2 User Login
   -unless current_user
     #login
-      - form_for(@user_session, :url => user_session_path) do |f|
+      = form_for(@user_session, :url => user_session_path) do |f|
         = render "shared/error_messages", :target => @user_session
         .field
           = f.label :login

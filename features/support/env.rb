@@ -12,6 +12,12 @@ require 'cucumber/rails/world'
 require 'cucumber/rails/active_record'
 require 'cucumber/web/tableish'
 
+require 'email_spec' # add this line if you use spork
+require 'email_spec/cucumber'
+
+require 'factory_girl'
+require File.expand_path(File.dirname(__FILE__) + '/../../spec/factories')
+
 require 'capybara/rails'
 require 'capybara/cucumber'
 require 'capybara/session'

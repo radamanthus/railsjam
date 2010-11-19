@@ -45,15 +45,16 @@
           .contact-right
         #latest_tweet
           -tweet = Tweet.recent.first
-          .tweet
-            .avatar
-              -twitter_image = get_avatar_by_username(tweet.user_name, "n")
-              =image_tag twitter_image
+          - unless tweet.nil?
+            .tweet
+              .avatar
+                -twitter_image = get_avatar_by_username(tweet.user_name, "n")
+                =image_tag twitter_image
 
-            .text
-              =auto_link(tweet.body, :all, :target => "_blank" )
-              -time = time_ago_in_words(tweet.tweet_date) + " ago"
-              %span=link_to time, get_twitter_link(tweet.user_name,tweet.twitter_status_id)
+              .text
+                =auto_link(tweet.body, :all, :target => "_blank" )
+                -time = time_ago_in_words(tweet.tweet_date) + " ago"
+                %span=link_to time, get_twitter_link(tweet.user_name,tweet.twitter_status_id)
       
           
         
